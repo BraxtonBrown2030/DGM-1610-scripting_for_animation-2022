@@ -4,13 +4,17 @@ using UnityEngine;
 
 public class If_Statements : MonoBehaviour
 {
-   // public string lightColor;
+   public string lightColor;
 
-   //public string weather;
+   public string Books;
 
    public string HairColor;
 
    public int age;
+
+   public float Change = 1.00f;
+
+    public bool yes = true;
 
     // Start is called before the first frame update
     void Start()
@@ -21,7 +25,7 @@ public class If_Statements : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        /* this is a example of multy if statment 
+         
         if(lightColor == "Red") 
         {
          Debug.Log("The light is "+ lightColor +" STOP!!!!" );
@@ -38,17 +42,17 @@ public class If_Statements : MonoBehaviour
         {
             Debug.Log("Wrong color!");
         }
-        */
-        /* this is a weather conditonal 
-        if(weather == "Rain" || weather == "Snow")
+        
+        
+        if(Books == "paper" || Books == "Hard cover")
         {
-            Debug.Log("The waether is bad, you should wear a coast!");
+            Debug.Log("You can return this book!!");
         }
-        else if(weather == "Sunny" || weather == "Partly Cloudy")
+        else if(Books == "Damaged" || Books == "Ripped")
         {
-            Debug.Log("You do not need a coat!");
+            Debug.Log("You cannot return this book");
         }
-        */
+        
         if(HairColor == "red" && age == 6)
         {
             Debug.Log("You can ride the Merry GO Round!!");
@@ -58,5 +62,22 @@ public class If_Statements : MonoBehaviour
             Debug.Log("You are old enough to ride the Fire Drgaon ride!!");
         }
 
+        if(Change > 1.00f)
+        {
+            Debug.Log("Transaction valid");
+        }  
+        else if(Change < 1.00f)
+        {
+            Debug.Log("Transaction invalid");
+        } 
+
+        if(yes == true)
+        {
+            Debug.Log("yes");
+        }
+        else if(yes == false)
+        {
+            Debug.Log("NO");
+        }
     }
 }
