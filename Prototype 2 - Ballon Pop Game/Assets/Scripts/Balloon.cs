@@ -8,6 +8,7 @@ public class Balloon : MonoBehaviour
     public int ClickToPop = 3; // how many clicks before balloon pops
     public float scaleToIncrease = 0.10f; // the amount of scale the balloon grows when you click it ( 0.1 is 10%)
 
+    public ScoreManager ScoreManager; // variable to refeence the scoremanager script 
     void Start() // at start this will run
     {
         
@@ -26,6 +27,7 @@ public class Balloon : MonoBehaviour
 
         if(ClickToPop == 0)
         {
+            ScoreManager.IncreaseScoreText(ScoreToGive);
             Destroy(gameObject);
         }
     }

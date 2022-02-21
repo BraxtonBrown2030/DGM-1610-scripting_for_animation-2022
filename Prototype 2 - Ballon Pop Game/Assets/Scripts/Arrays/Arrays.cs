@@ -8,6 +8,8 @@ public class Arrays : MonoBehaviour
     //  starts at 0 not 1         {0,        1,        2,      3,          4,      5,      6}
     public int[] numbers = {23,46,77,10,42,98,63,81};
 
+    public string[] CandyBars = {"coco", "Nuts", "filling", "toptings", "wraper"};
+
     // Start is called before the first frame update
     void Start()
     {
@@ -18,12 +20,18 @@ public class Arrays : MonoBehaviour
         friendNames[0] = "Veronica";
         Debug.Log("New friend " + friendNames[0]);
         */
-
+        /*
         // looping arays for reptartve tasks
         foreach( int numbers in numbers)
         {
             Debug.Log(numbers);
         }
+        */
+        foreach(string CandyBars in CandyBars)
+        {
+            Debug.Log(CandyBars);
+        }
+        
     }
 
 
