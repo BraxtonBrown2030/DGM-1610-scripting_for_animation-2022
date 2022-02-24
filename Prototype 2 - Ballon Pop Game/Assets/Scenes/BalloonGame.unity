@@ -132,6 +132,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 90566034}
+  - component: {fileID: 90566035}
   m_Layer: 0
   m_Name: SpawnManager
   m_TagString: Untagged
@@ -147,12 +148,30 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 90566033}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 345.79987, y: 240.77795, z: -25.255238}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &90566035
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 90566033}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1ea15f1dab8808b419caa79bfbb21001, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  balloonPrefabs:
+  - {fileID: 668834594}
+  - {fileID: 1849503422}
+  - {fileID: 1126104864}
+  startDelay: 0.5
+  spawnInterval: 1.5
 --- !u!1 &280190172
 GameObject:
   m_ObjectHideFlags: 0
@@ -224,22 +243,6 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 8579780158349964744, guid: f3dbca7a5b2ce9345abe856204f9b419, type: 3}
   m_PrefabInstance: {fileID: 8579780157768298218}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &668834599
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 668834594}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a8ca4b942a3be9a4e91b0924e27efcea, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  ScoreToGive: 100
-  ClickToPop: 7
-  scaleToIncrease: 0.1
-  ScoreManager: {fileID: 0}
 --- !u!1 &1094549860
 GameObject:
   m_ObjectHideFlags: 0
@@ -345,22 +348,6 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 6210234579122096094, guid: a643ebfe42b024146acb364aa0fbd740, type: 3}
   m_PrefabInstance: {fileID: 6210234578099337470}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1126104869
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1126104864}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a8ca4b942a3be9a4e91b0924e27efcea, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  ScoreToGive: 100
-  ClickToPop: 3
-  scaleToIncrease: 0.1
-  ScoreManager: {fileID: 0}
 --- !u!1 &1377521733
 GameObject:
   m_ObjectHideFlags: 0
@@ -500,6 +487,35 @@ MonoBehaviour:
   - wraper
   dec:
   - 23.5
+  CarNames:
+  - honda
+  - jeep
+  - dodge
+  - tesla
+  ItemNames:
+  - log
+  - stick
+  - sword
+  - hammer
+  - bannana
+  - stool
+  TireSize: 0a000000140000001e0000002d000000370000003c000000
+  Greatings:
+  - Hello
+  - Hi
+  - Good Morning
+  - How are you
+  Goodbyes:
+  - See you later
+  - Bye
+  - have a nice day
+  - see you next time
+  CM:
+  - 10.2
+  - 34.6
+  - 78.4
+  - 56.5
+  stoolsPerTable: 0c000000150000000d0000000e0000001000000012000000
 --- !u!4 &1522271585
 Transform:
   m_ObjectHideFlags: 0
@@ -552,13 +568,13 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1776286104}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 1b1cc17c8ce024e4cb0e7c4a9117dd3c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   Score: 0
-  scoreText: {fileID: 0}
+  scoreText: {fileID: 2124694441}
 --- !u!1 &1840866736
 GameObject:
   m_ObjectHideFlags: 0
@@ -647,22 +663,6 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 3154105305122952826, guid: e4120d89e4607844eaa1dfabd95bc90e, type: 3}
   m_PrefabInstance: {fileID: 3154105304555878596}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1849503427
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1849503422}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a8ca4b942a3be9a4e91b0924e27efcea, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  ScoreToGive: 100
-  ClickToPop: 6
-  scaleToIncrease: 0.1
-  ScoreManager: {fileID: 0}
 --- !u!1 &2124694439
 GameObject:
   m_ObjectHideFlags: 0
@@ -852,6 +852,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Green_Balloon
       objectReference: {fileID: 0}
+    - target: {fileID: 3154105305122952826, guid: e4120d89e4607844eaa1dfabd95bc90e, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e4120d89e4607844eaa1dfabd95bc90e, type: 3}
 --- !u!1001 &6210234578099337470
@@ -909,7 +913,12 @@ PrefabInstance:
       propertyPath: m_Name
       value: Blue_Balloon
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    - target: {fileID: 6210234579122096094, guid: a643ebfe42b024146acb364aa0fbd740, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: -5604093479331057023, guid: a643ebfe42b024146acb364aa0fbd740, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: a643ebfe42b024146acb364aa0fbd740, type: 3}
 --- !u!1001 &8579780157768298218
 PrefabInstance:
@@ -918,9 +927,21 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: -6251615628929648316, guid: f3dbca7a5b2ce9345abe856204f9b419, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 668834599, guid: f3dbca7a5b2ce9345abe856204f9b419, type: 3}
+      propertyPath: ScoreManager
+      value: 
+      objectReference: {fileID: 1776286106}
     - target: {fileID: 8579780158349964744, guid: f3dbca7a5b2ce9345abe856204f9b419, type: 3}
       propertyPath: m_Name
       value: Red_Balloon
+      objectReference: {fileID: 0}
+    - target: {fileID: 8579780158349964744, guid: f3dbca7a5b2ce9345abe856204f9b419, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8579780158349964748, guid: f3dbca7a5b2ce9345abe856204f9b419, type: 3}
       propertyPath: m_RootOrder

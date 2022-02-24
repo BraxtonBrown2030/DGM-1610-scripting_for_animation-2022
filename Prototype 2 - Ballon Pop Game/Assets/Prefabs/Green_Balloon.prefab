@@ -108,6 +108,9 @@ GameObject:
   - component: {fileID: 3154105305122952709}
   - component: {fileID: 3154105305122952708}
   - component: {fileID: 3154105305122952827}
+  - component: {fileID: 3702734694831328568}
+  - component: {fileID: 1849503427}
+  - component: {fileID: 1849503428}
   m_Layer: 0
   m_Name: Green_Balloon
   m_TagString: Untagged
@@ -122,8 +125,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3154105305122952826}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: -0.041442, z: -1.141}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0.9645463, y: 0.9770821, z: 0.80271304}
   m_Children:
   - {fileID: 3154105305394356370}
@@ -192,6 +195,52 @@ SphereCollider:
   serializedVersion: 2
   m_Radius: 0.5
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &3702734694831328568
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3154105305122952826}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f0d92e41e892b034b9f3b7111a80b39b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  moveSpeed: 1
+  lowerBound: -10
+  ScoreManager: {fileID: 0}
+--- !u!114 &1849503427
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3154105305122952826}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a8ca4b942a3be9a4e91b0924e27efcea, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ScoreToGive: 100
+  ClickToPop: 6
+  scaleToIncrease: 0.1
+  ScoreManager: {fileID: 0}
+--- !u!114 &1849503428
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3154105305122952826}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f0d92e41e892b034b9f3b7111a80b39b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  moveSpeed: 1
+  lowerBound: -10
+  ScoreManager: {fileID: 0}
 --- !u!1 &3154105305394356369
 GameObject:
   m_ObjectHideFlags: 0

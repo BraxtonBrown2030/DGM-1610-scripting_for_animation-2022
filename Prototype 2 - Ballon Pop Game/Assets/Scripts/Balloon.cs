@@ -7,16 +7,11 @@ public class Balloon : MonoBehaviour
     public int ScoreToGive = 100; // points givin when a balloon is poped
     public int ClickToPop = 3; // how many clicks before balloon pops
     public float scaleToIncrease = 0.10f; // the amount of scale the balloon grows when you click it ( 0.1 is 10%)
-
     public ScoreManager ScoreManager; // variable to refeence the scoremanager script 
     void Start() // at start this will run
     {
-        
-    }
-
-    void Update() // this will update every frame
-    {
-    
+        // Refrence ScoreManger Component
+        ScoreManager = GameObject.Find("ScoreManager").GetComponent<ScoreManager>();
     }
 
     void OnMouseDown() // this event will trigger on a mouse press
