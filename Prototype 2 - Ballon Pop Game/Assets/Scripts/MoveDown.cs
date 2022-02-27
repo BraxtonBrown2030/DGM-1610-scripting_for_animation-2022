@@ -5,15 +5,15 @@ using UnityEngine;
 public class MoveDown : MonoBehaviour
 {
     public float moveSpeed = 1.0f;
-    public float lowerBound = -10f;
-    public ScoreManager ScoreManager; // variable to refeence the scoremanager script 
+    public float lowerBound = -10.0f;
+    public ScoreManager scoreManager; // variable to refeence the scoremanager script 
     private Balloon Balloon;
 
     // Start is called before the first frame update
     void Start()
     {
         // Refrence ScoreManger Component
-        ScoreManager = GameObject.Find("ScoreManager").GetComponent<ScoreManager>();
+        scoreManager = GameObject.Find("ScoreManager").GetComponent<ScoreManager>();
         Balloon = GetComponent<Balloon>();
     }
 
@@ -25,7 +25,7 @@ public class MoveDown : MonoBehaviour
         // Destory Balloon after it passes lowerBound
         if(transform.position.y < lowerBound)
         {
-            ScoreManager.DecreaseScoreText(Balloon.ScoreToGive);
+            scoreManager.DecreaseScoreText(Balloon.ScoreToGive);
             Destroy(gameObject);
         }
     }
