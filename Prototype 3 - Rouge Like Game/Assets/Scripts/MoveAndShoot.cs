@@ -8,8 +8,8 @@ public class MoveAndShoot : MonoBehaviour
     public float stopDistance;
     public float retreatDistance;
     private Transform target;
-    private float shotDeley;
-    public float startDeley;
+    private float shotDelay;
+    public float startDelay;
     public GameObject projectile;
 
     // Start is called before the first frame update
@@ -18,7 +18,7 @@ public class MoveAndShoot : MonoBehaviour
         
         target = GameObject.FindGameObjectWithTag("Player").GetComponent<Transform>();
 
-        shotDeley = startDeley;
+        shotDelay = startDelay;
 
     }
 
@@ -39,13 +39,14 @@ public class MoveAndShoot : MonoBehaviour
             transform.position = Vector2.MoveTowards(transform.position, target.position, -speed * Time.deltaTime);
         }
 
-        if(shotDeley <= 0)
+        if(shotDelay <= 0)
         {
             Instantiate(projectile, transform.position, Quaternion.identity);
+            shotDelay = startDelay;
         }
         else
         {
-            shotDeley -= Time.deltaTime;
+            shotDelay -= Time.deltaTime;
         }
     }
 }
