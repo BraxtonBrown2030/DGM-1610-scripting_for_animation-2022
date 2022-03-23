@@ -11,7 +11,8 @@ public class PlayerController : MonoBehaviour
     [Header("Player Movement")]
     public float moveSpeed = 5f; // speed of the player movement
     private Rigidbody2D rb; // rigidbody2d refrence for the script
-    Vector2 movement; // stores the players x,y position for movement 
+    public Vector2 direction;
+    private Vector2 movement; // stores the players x,y position for movement 
 
     [Header("Player Combat")]
     public float attackRange; // range of the player attack
@@ -31,18 +32,39 @@ public class PlayerController : MonoBehaviour
     {    
         movement.x = Input.GetAxis("Horizontal");// left right movenet for player 
         movement.y = Input.GetAxis("Vertical"); // gets the up down movement for player 
+
+        if(Input.GetKeyDown(KeyCode.X)) // chosing the key press for the action
+        {
+            if(Time.time - lastAttackTime >= attackRate)
+            {
+                Attack();
+            }
+        }
     }
     // set number of calls per frame 
-    void FixedUpdate()
+    void FixedUpdate() //using fixedupdate make movement and physisysc smothery than yousing other up date values
     {
         rb.MovePosition(rb.position + movement * moveSpeed * Time.deltaTime);
+
+        UpdateDirection();
+    }
+
+    void UpdateDirection()
+    {
+        Vector2 vel = new Vector2(movement.x,movement.y);
+
+        if(vel.magnitude != 0)
+        {
+            direction = vel;
+        }
+        rb.velocity = vel * moveSpeed;
     }
 
     void Attack()
     {
         lastAttackTime = Time.time;
         
-        RaycastHit2D hit = Physics2D.Raycast(transform.position, facingDirection, attackRange, enemyLayer); // raycasting detects if it has it somtihng on the enemy layer if yes run code
+        RaycastHit2D hit = Physics2D.Raycast(transform.position, direction, attackRange, enemyLayer); // raycasting detects if it has it somtihng on the enemy layer if yes run code
 
         if(hit.collider != null)
         {
@@ -53,5 +75,15 @@ public class PlayerController : MonoBehaviour
     void Die()
     {
         Debug.Log("You have Died");
+    }
+
+     public void TakeDamage(int damage)
+    {
+        curHP -= damage;
+
+        if(curHP <= 0)
+        {
+            Die();
+        }
     }
 }
