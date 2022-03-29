@@ -519,6 +519,8 @@ MonoBehaviour:
   npcConv: Hello
   socialClass: 5
   racePlacement: 1
+  talkingNcp: 90
+  responceTest: 
 --- !u!4 &1864182760
 Transform:
   m_ObjectHideFlags: 0

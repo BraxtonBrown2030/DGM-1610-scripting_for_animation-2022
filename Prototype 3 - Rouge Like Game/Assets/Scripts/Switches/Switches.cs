@@ -7,22 +7,33 @@ public class Switches : MonoBehaviour
     public string npcConv;
     public int socialClass = 1; 
     public int racePlacement;
+    public float talkingNcp;
+    public string responceTest;
+
     void Start()
     {
         switch(npcConv)
         {
             case "Hello":
-            Debug.Log("hello good sir mat the god bless you");
+             Debug.Log("hello good sir mat the god bless you");
             break; // this it a stoper foe the casees same and the ; for other code
+
             case "Goodbye":
-            Debug.Log("Safe travles to you");
-            break;
-            case "foul banded prepare to die":
-            Debug.Log("arm thy self");
+             Debug.Log("Safe travles to you");
             break;
 
+            case "foul banded prepare to die":
+             Debug.Log("arm thy self");
+            break;
+
+            case "Prepare for combat":
+             Debug.Log("on gaurd cretain");
+            break;
+
+            case "what would you like to bye":
+             Debug.Log("thank you for buying that");
+            break;
         }
-        
         
         switch(socialClass)
         {
@@ -75,6 +86,52 @@ public class Switches : MonoBehaviour
 
             case 1: 
              Debug.Log("you won the race");
+            break;
+        }
+
+        switch(talkingNcp)
+        {
+            case 0:
+             Debug.Log("hello welcom to are town");
+            break;
+
+            case 1:
+             Debug.Log("This is the best town in the west");
+            break;
+
+            case 2:
+             Debug.Log("Are you the hero");
+            break;
+
+            case 3:
+             Debug.Log("are you going to save us");
+            break;
+
+            default:
+             Debug.Log("who are you?");
+            break;
+        }
+
+        switch(responceTest)
+        {
+            case "how are you":
+             Debug.Log("I amd doing fine");
+            break;
+
+            case "are you ok":
+             Debug.Log("I am not feeling ok");
+            break;
+
+            case "I am done":
+             Debug.Log("thankyou for doing that");
+            break;
+
+            case "That was cool":
+             Debug.Log("thank you for that");
+            break;
+
+            case "what are you doing":
+             Debug.Log("I am makeing more weapons");
             break;
         }
         
