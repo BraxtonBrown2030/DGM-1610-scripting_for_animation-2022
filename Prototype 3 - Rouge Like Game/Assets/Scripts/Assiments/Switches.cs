@@ -9,7 +9,11 @@ public class Switches : MonoBehaviour
     public int racePlacement;
     public float talkingNcp;
     public string responceTest;
-
+    public string orderTest;
+    public int prizeWheel;
+    public int gearTip;
+    public int skillSlot;
+    public string manga;
     void Start()
     {
         switch(npcConv)
@@ -134,7 +138,115 @@ public class Switches : MonoBehaviour
              Debug.Log("I am makeing more weapons");
             break;
         }
-        
-    }
+        switch(orderTest)
+        {
+            case "What can I get you":
+             Debug.Log("can i get a sandwitch");
+            break;
 
+            case "Do you need anything":
+             Debug.Log("can i get some ranch");
+            break;
+            
+            case "are you splting the cheak":
+             Debug.Log("not it will be mone chek");
+            break;
+
+            case "have a good day":
+             Debug.Log("You too");
+            break;
+
+            case "do you need a check":
+             Debug.Log("yes can i get a check");
+            break;
+        }
+        switch(prizeWheel)
+        {
+            case 0:
+             Debug.Log("you have won a new car");
+            break;
+
+            case 1:
+             Debug.Log("you have won a new house");
+            break;
+
+            case 2:
+             Debug.Log("you have won money");
+            break;
+
+            case 3:
+             Debug.Log("won have won a new toster");
+            break;
+            
+            case 4:
+             Debug.Log("you have won a small prize");
+            break;
+        }
+        switch(gearTip)
+        {
+            case 0:
+             Debug.Log("This gose in the head slot");
+            break;
+
+            case 1:
+             Debug.Log("This gose int he body slot");
+            break;
+
+            case 2:
+             Debug.Log("This dose in the arms slot");
+            break;
+
+            case 3:
+             Debug.Log("This gose in the shoe slot ");
+            break;
+
+            case 4:
+             Debug.Log("This gose in the wepaons slot");
+            break;
+        }
+        switch(skillSlot)
+        {
+            case 0:
+             Debug.Log("this skill cannot be put in the hotbar");
+            break;
+
+            case 1:
+             Debug.Log("this skill can be put in the hotbar");
+            break;
+
+            case 2:
+             Debug.Log("this skill can be augmented");
+            break;
+
+            case 3:
+             Debug.Log("this skill cant be augmented");
+            break;
+
+            case 4:
+             Debug.Log("this skill cannot be learend about this class");
+            break;
+        }
+        switch(manga)
+        {
+            case "Dr.Stone":
+             Debug.Log(" This manga had ended but is one of the best");
+            break;
+
+            case "Kuma Kuma kuma Bear":
+             Debug.Log("This is a great and chill read");
+            break;
+
+            case "the new gate":
+             Debug.Log("This is a great story and has lots of funny parts aswell");
+            break;
+
+            case "Bakuman":
+             Debug.Log("This managa is about manking manga");
+            break;
+            
+            case "Re monster":
+             Debug.Log("this is about monster trying to live in a harsh world");
+            break;
+        }
+    }
 }
