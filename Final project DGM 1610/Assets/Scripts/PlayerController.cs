@@ -20,7 +20,7 @@ public class PlayerController : MonoBehaviour
     void Start()
     {
         rb3D = GetComponent<Rigidbody>();
-
+        curHP = maxHP;
     }
 
     void Update()
@@ -28,7 +28,7 @@ public class PlayerController : MonoBehaviour
         hImput= Input.GetAxis("Horizontal");
         fImput = Input.GetAxis("Vertical");
 
-        transform.Translate(Vector3.left * Time.deltaTime * moveSpeed * fImput);
+        transform.Translate(Vector3.right * Time.deltaTime * moveSpeed * fImput);
         transform.Rotate(Vector3.up, turnSpeed * Time.deltaTime * hImput);
     }
 
@@ -42,4 +42,9 @@ public class PlayerController : MonoBehaviour
     {
        
     }
+    void Die()
+    {
+        Destroy(gameObject);
+    }
+
 }
