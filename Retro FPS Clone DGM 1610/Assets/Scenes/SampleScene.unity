@@ -2938,7 +2938,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &1649352488
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2951,7 +2951,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e2735c5779f691944a443bba0789512b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  numEwoks: 20
   ducksInPond: 99
+  carsInLot: 20
+  shoppersInStore: 0
 --- !u!4 &1649352489
 Transform:
   m_ObjectHideFlags: 0
