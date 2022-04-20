@@ -23,7 +23,7 @@ public class PlayerController : MonoBehaviour
         rb2D = GetComponent<Rigidbody2D>();
     }
 
-    void FixedUpdate() // fixed number of frams to make game run the same on all platforms
+    void Update() // fixed number of frams to make game run the same on all platforms
     {
         // ground Check Sensor
         isGrounded = Physics2D.OverlapCircle(groundCheck.position, groundCheckRadius, whatIsGround);
