@@ -4,27 +4,23 @@ using UnityEngine;
 
 public class HealthBar : MonoBehaviour
 {
-    public Slider slider;
-    public float scaleToIncrease = 1.0f;
+    private int healthBar;
+    public int scaleToIncrease;
+    public int scaleToDecrease;
 
-    public void SetMaxHealth(int health)
-    {
-        slider.maxValue = health;
-        slider.value = health;
-    }
-
-    public void SetHealth(int health)
-    {
-        slider.value = health;
-    }
-
-    void OnTakeDamage()
+    
+    void Start()
     {
         
     }
 
-    void HealthBarSizeChange()
+   
+    void Update()
     {
-        transform.localScale -+ Vector3.one * scaleToIncrease;
+        
+    }
+    public void SizeChange()
+    {
+
     }
 }
