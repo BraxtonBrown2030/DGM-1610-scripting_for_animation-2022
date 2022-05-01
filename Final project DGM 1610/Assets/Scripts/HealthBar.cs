@@ -7,11 +7,14 @@ public class HealthBar : MonoBehaviour
     private int healthBar;
     public int scaleToIncrease;
     public int scaleToDecrease;
+    public PlayerController playerController;
+    public GameObject healthbar;
 
     
     void Start()
     {
-        
+        //healthBar = GameObject.Find("HealthBar").GetComponent<HealthBar>();
+
     }
 
    
@@ -19,8 +22,15 @@ public class HealthBar : MonoBehaviour
     {
         
     }
-    public void SizeChange()
+    public void SizeChangeOnDamage()
     {
-
+        transform.localScale -= Vector3.one * scaleToDecrease;
+    }
+    public void OnHitChange()
+    {
+        if(playerController.curHP > playerController.maxHP)
+        {
+            SizeChangeOnDamage();
+        }
     }
 }

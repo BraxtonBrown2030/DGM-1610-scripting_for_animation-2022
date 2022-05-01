@@ -19,17 +19,31 @@ public class PlayerController : MonoBehaviour
 
     [Header ("Player Combat")]
     public float attackRange;
+    public float maxDistance;
     public float attackRate;
     private float lastAttackTime;
     public int damage;
     public LayerMask enemyLayer;
+
+    [Header(" Invintory")]
+    public int key;
+    public int coin;
+    public int ammo;
+
+    [Header("Sound Effects")]
+    private AudioSource source;
+    public AudioClip marker;
+
+    [Header("scripts")]
+    public HealthBar hpBar;
 
 
     void Start()
     {
         rb3D = GetComponent<Rigidbody>();
         curHP = maxHP;
-        
+
+        source = GetComponent<AudioSource>();
     }
 
     void Update()
@@ -39,6 +53,14 @@ public class PlayerController : MonoBehaviour
 
         transform.Translate(Vector3.right * Time.deltaTime * moveSpeed * fImput);
         transform.Rotate(Vector3.up, turnSpeed * Time.deltaTime * hImput);
+        
+        if(Input.GetMouseButtonDown(0))
+     {
+        Attack();
+        Debug.Log("i have hit theme");
+        source.PlayOneShot(marker, 1.0f);
+     }
+    
     }
 
     void FixedUpdate()
@@ -54,18 +76,19 @@ public class PlayerController : MonoBehaviour
     public void TakeDamage(int damage)
     {
         curHP -= damage;
-
     }
 
-    void Attack()
+    public void Attack()
     {
         lastAttackTime = Time.time;
-
-        RaycastHit2D hit = Physics2D.Raycast(transform.position, drirection, attackRange, enemyLayer);
+        
+        RaycastHit hit = Physics.Raycast(transform.position, transform.forward, attackRange, enemyLayer);
 
         if(hit.collider != null)
         {
             hit.collider.GetComponent<EnemyController>()?.TakeDamage(damage);
+            Debug.Log("this is working");
         }
+        
     }
 }

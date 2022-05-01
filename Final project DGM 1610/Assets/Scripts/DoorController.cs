@@ -4,17 +4,26 @@ using UnityEngine;
 
 public class DoorController : MonoBehaviour
 {
-    private int open;
-    
+    private PlayerController playerController;
+
     // Start is called before the first frame update
     void Start()
     {
-        
+        playerController = GameObject.Find("Player").GetComponent<PlayerController>();
     }
 
-    // Update is called once per frame
-    void Update()
+    void OnTriggerenter(Collider other)
     {
-        
-    }
+        if(other.CompareTag("Player") && playerController.key ==1)
+        {
+            Debug.Log("The door has opened");
+            Destroy(gameObject);
+        }
+        else
+        {
+            Debug.Log("You need a key");
+        }
+
+
+    }    
 }
