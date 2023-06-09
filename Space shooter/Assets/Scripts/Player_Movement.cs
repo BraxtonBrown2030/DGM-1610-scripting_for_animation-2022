@@ -20,8 +20,8 @@ public class Player_Movement : MonoBehaviour
     void Update()
     {
 
-         movement.x = Imput.GetAxis("Horizantal");
-         movement.Y = Imput.GetAxis("Vertical");
+         movement.x = Input.GetAxis("Horizantal");
+         movement.y = Input.GetAxis("Vertical");
 
     if(Input.GetKeyDown(KeyCode.Space))
         {
@@ -32,7 +32,7 @@ public class Player_Movement : MonoBehaviour
 
     }
 
-    void attack()
+    void Attack()
     {
 
 
