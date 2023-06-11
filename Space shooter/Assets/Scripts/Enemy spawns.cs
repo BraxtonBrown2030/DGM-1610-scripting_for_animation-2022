@@ -4,14 +4,44 @@ using UnityEngine;
 
 public class Enemyspawns : MonoBehaviour
 {
-    // Start is called before the first frame update
+    [Header("cordanints")]
+    public float x_point;
+    public float y_point;
+
+    [Header("Enemy type")]
+    public int number_of_enemeys;
+    public int type_of_enemies;
+
+    [Header("Range and detection")]
+    public float range;
+
+
+    public Player_Movement player;
+    public int speed;
+
     void Start()
     {
+        player = GameObject.Find("Player").GetComponent<Player_Movement>();
+
         
     }
 
-    // Update is called once per frame
-    void Update()
+     void Update()
+    {
+        if(player >= range)
+        {
+            Spawn()
+        }
+
+
+    }
+
+    void ActivateRage()
+    {
+
+    }
+
+    void Spawn()
     {
         
     }
