@@ -28,10 +28,7 @@ public class Enemyspawns : MonoBehaviour
 
      void Update()
     {
-        if(player >= range)
-        {
-            Spawn()
-        }
+    
 
 
     }
@@ -43,6 +40,6 @@ public class Enemyspawns : MonoBehaviour
 
     void Spawn()
     {
-        
+
     }
 }
