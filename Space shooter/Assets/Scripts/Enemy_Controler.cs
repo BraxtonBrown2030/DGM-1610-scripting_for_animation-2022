@@ -21,8 +21,7 @@ public class Enemy_Controler : MonoBehaviour
 
     [Header("Game_Objects")]
     public GameObject _Lootdrop;
-
-
+ 
     void Start()
     {
         _player = GameObject.Find("Player").GetComponent<Player_Movement>();
@@ -41,10 +40,25 @@ public class Enemy_Controler : MonoBehaviour
 
     }
 
+    public void TakeDamage()
+    {
+        
+    }
+
     void Attack()
     {
 
         Debug.Log("Enemy attack");
 
+    }
+
+    void Die()
+    {
+        Destroy(gameObject);
+    }
+
+    void LootDrop()
+    {
+        Instantiate(_Lootdrop, transform.position, Quaternion.identity);
     }
 }
