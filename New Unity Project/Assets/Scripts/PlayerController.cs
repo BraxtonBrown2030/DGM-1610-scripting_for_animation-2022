@@ -70,6 +70,18 @@ public class PlayerController : MonoBehaviour
             transform.rotation = Quaternion.Euler(0,0,0);
         }
 
+        /*
+             if(Input.GetKeyDown(KeyCode.V))
+        {      
+            transform.rotation = Quaternion.Euler(0,90,0);
+        }
+
+         if(Input.GetKeyDown(KeyCode.C))
+        {          
+            transform.rotation = Quaternion.Euler(0,-90,0);
+        }
+        */
+
     }
     void FixedUpdate()
     {
