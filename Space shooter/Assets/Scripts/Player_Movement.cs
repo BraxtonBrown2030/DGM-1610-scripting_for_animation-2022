@@ -20,7 +20,8 @@ public class Player_Movement : MonoBehaviour
     private float attackSpeed;
     public int _damage;
 
-    
+    [Header("iteams")]
+    public float iteam;
 
     void Start()
     {
