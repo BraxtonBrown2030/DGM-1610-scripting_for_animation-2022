@@ -1,7 +1,10 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.ComponentModel;
+using Unity.Mathematics;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.VFX;
 
 public class PlayerController : MonoBehaviour
 {
@@ -63,6 +66,8 @@ public class PlayerController : MonoBehaviour
         // changes the screen rotaion
         {
             transform.rotation =  Quaternion.Euler(0,180,0);    
+            movement.x =
+            movement.y = movement.x;
         }
         if(Input.GetKeyDown(KeyCode.V))
         {
@@ -70,8 +75,9 @@ public class PlayerController : MonoBehaviour
             transform.rotation = Quaternion.Euler(0,0,0);
         }
 
+        
         /*
-             if(Input.GetKeyDown(KeyCode.V))
+         if(Input.GetKeyDown(KeyCode.V))
         {      
             transform.rotation = Quaternion.Euler(0,90,0);
         }

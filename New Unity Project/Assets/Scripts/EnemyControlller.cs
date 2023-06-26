@@ -1,5 +1,7 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
+using JetBrains.Annotations;
 using UnityEngine;
 
 public class EnemyControlller : MonoBehaviour
@@ -16,6 +18,8 @@ public class EnemyControlller : MonoBehaviour
 
     [Header("Scripts")]
     public PlayerController player;
+    public Type wall;
+    public Follow _follow;
 
     [Header("drops")]
     public GameObject lootDrop;
@@ -24,6 +28,7 @@ public class EnemyControlller : MonoBehaviour
     {
         // sets the player object
         player = GameObject.Find("Player").GetComponent<PlayerController>();
+        
 
     }
 
@@ -64,5 +69,20 @@ public class EnemyControlller : MonoBehaviour
     { 
         // finds the disired loot drop and places it in the sceen 
         Instantiate(lootDrop, transform.position, Quaternion.identity);
+    }
+    
+    void Stop()
+    {
+        _follow.speed = 0;
+    }
+
+    void OnCollisionEnter(Collision collision)
+    {
+
+        if(gameObject.CompareTag("Wall"))
+        {
+            Stop();
+        }
+
     }
 }
