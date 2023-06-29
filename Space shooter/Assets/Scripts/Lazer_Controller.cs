@@ -17,15 +17,10 @@ public class Lazer_Controller : MonoBehaviour
     {
       transform.Translate(Vector3.up *_LazerSpeed * Time.deltaTime);
        
-        DeSpawn();
-    }
 
-    void DeSpawn()
-    {
-
-        if(transform.position.y >= 8)
+        if(transform.position.y > 8f)
         {
-            
+            Destroy(gameObject);
         }
 
     }

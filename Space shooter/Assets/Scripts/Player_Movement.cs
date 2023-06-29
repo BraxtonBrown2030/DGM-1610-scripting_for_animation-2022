@@ -82,7 +82,7 @@ public class Player_Movement : MonoBehaviour
 
         Debug.Log("this is working");
 
-        Instantiate(_Lazer, transform.position, Quaternion.identity); // Qutarnion.identity = defalt postion
+        Instantiate(_Lazer, transform.position + new Vector3(0, 0.8f, 0), Quaternion.identity); // Qutarnion.identity = defalt postion
 
     }
 

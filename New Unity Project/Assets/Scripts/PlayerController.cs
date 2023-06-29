@@ -62,11 +62,12 @@ public class PlayerController : MonoBehaviour
                 source.PlayOneShot(maker, 1.0f);
             
         }
+        /*
         if(Input.GetKeyDown(KeyCode.C))
         // changes the screen rotaion
         {
             transform.rotation =  Quaternion.Euler(0,180,0);    
-            movement.x =
+            movement.x = movement.y;
             movement.y = movement.x;
         }
         if(Input.GetKeyDown(KeyCode.V))
@@ -74,9 +75,9 @@ public class PlayerController : MonoBehaviour
             //sets screen rotaion to defult
             transform.rotation = Quaternion.Euler(0,0,0);
         }
-
+        */
         
-        /*
+        
          if(Input.GetKeyDown(KeyCode.V))
         {      
             transform.rotation = Quaternion.Euler(0,90,0);
@@ -86,7 +87,14 @@ public class PlayerController : MonoBehaviour
         {          
             transform.rotation = Quaternion.Euler(0,-90,0);
         }
-        */
+        if(Input.GetKeyDown(KeyCode.X))
+        {
+            transform.rotation = quaternion.Euler(0,180,0);
+        }
+        if(Input.GetKeyDown(KeyCode.Z))
+        {
+            transform.rotation = quaternion.Euler(0,0,0);
+        }
 
     }
     void FixedUpdate()
