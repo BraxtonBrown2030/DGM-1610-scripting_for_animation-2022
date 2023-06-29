@@ -7,8 +7,8 @@ using TMPro;
 public class Player_UI : MonoBehaviour
 {
     [Header("Pickup numbers")]
-    public int _socre;
-    public TextMeshProUGUI _numberOfKey;
+    public int _score;
+    public TextMeshProUGUI numberOfKeys;
 
 
     void Start()
@@ -24,7 +24,7 @@ public class Player_UI : MonoBehaviour
     void UpdateScoreText()
     {
 
-        _numberOfKey.text = "Score:  " + _socre;
+        numberOfKeys.text = "Score:  " + _score;
 
     }
 }

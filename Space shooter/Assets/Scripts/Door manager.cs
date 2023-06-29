@@ -19,7 +19,7 @@ public class Doormanager : MonoBehaviour
 
     void OntriggerEnetr2D(Collider2D other)
     {
-        if(other.CompareTag("Player") && player_Movement.iteam == 1)
+        if(other.CompareTag("Player") && player_Movement._iteam == 1)
         {
 
             Debug.Log("Door opens");
