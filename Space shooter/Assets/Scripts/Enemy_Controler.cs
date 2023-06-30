@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Data.Common;
 using UnityEngine;
 
 public class Enemy_Controler : MonoBehaviour
@@ -16,22 +17,28 @@ public class Enemy_Controler : MonoBehaviour
     public int _totalHeath;
     public int _curHealth;
 
-    [Header("Scripts_Refrences")]
-    public Player_Movement _player;
-
     [Header("Game_Objects")]
     public GameObject _Lootdrop;
  
     void Start()
     {
-        _player = GameObject.Find("Player").GetComponent<Player_Movement>();
+        
     }
 
 
     void Update()
     {
-
-        transform.Translate(Vector3.forward * Time.deltaTime * moveSpeed);
+        
+        if(transform.position.x >= -9.5 && transform.position.x <= 0)
+        {
+            transform.Translate(Vector3.left * Time.deltaTime * moveSpeed);
+        }
+        
+        else if(transform.position.x <= 9.5f && transform.position.x >= 0)
+        {
+            transform.Translate(Vector3.right *Time.deltaTime * moveSpeed);
+        }
+        
 
         if(_lastAttackTime >= -_attackSpeed)
         {
