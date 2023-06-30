@@ -29,14 +29,19 @@ public class Enemy_Controler : MonoBehaviour
     void Update()
     {
         
-        if(transform.position.x >= -9.5 && transform.position.x <= 0)
+        if(transform.position.x >= -9.5f && transform.position.x <= 0f)
         {
             transform.Translate(Vector3.left * Time.deltaTime * moveSpeed);
         }
         
-        else if(transform.position.x <= 9.5f && transform.position.x >= 0)
+        else if(transform.position.x <= 10f && transform.position.x >= 0f)
         {
-            transform.Translate(Vector3.right *Time.deltaTime * moveSpeed);
+            transform.Translate(Vector3.right * Time.deltaTime * moveSpeed);
+        }
+
+        if(transform.position.y >= -6.5)
+        {
+            Destroy(gameObject);
         }
         
 
@@ -54,8 +59,6 @@ public class Enemy_Controler : MonoBehaviour
 
     void Attack()
     {
-
-        Debug.Log("Enemy attack");
 
     }
 
