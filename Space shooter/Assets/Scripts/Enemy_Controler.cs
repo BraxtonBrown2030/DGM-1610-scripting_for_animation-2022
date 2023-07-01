@@ -60,26 +60,7 @@ public class Enemy_Controler : MonoBehaviour
     private void OnTriggerEnter(Collider other)
     {
 
-        
 
-    }
-    public void TakeDamage()
-    {
-        
-    }
 
-    void Attack()
-    {
-
-    }
-
-    void Die()
-    {
-        Destroy(gameObject);
-    }
-
-    void LootDrop()
-    {
-        Instantiate(_Lootdrop, transform.position, Quaternion.identity);
     }
 }
