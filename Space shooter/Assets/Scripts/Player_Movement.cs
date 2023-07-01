@@ -13,14 +13,13 @@ public class Player_Movement : MonoBehaviour
     private Vector2 movement;
     private float hImput;
     private float vImput;
-    //private float turnSpeed = 100.0f;
-    //private float moveSpeed = 25.0f;
     public float _speed;
 
     [Header("Player Combat")]
-    private float attackRange;
-    private float attackSpeed;
-    public int _damage;
+    [SerializeField]
+    private float _attackSpeed = -1f;
+    private float _lastattacktime = 0.3f;
+    public int damage;
     
     [SerializeField]
     private GameObject _Lazer;
@@ -41,7 +40,7 @@ public class Player_Movement : MonoBehaviour
         Debug.Log("game is running");
         Movement();
 
-    if(Input.GetKeyDown(KeyCode.Space))
+        if(Input.GetKeyDown(KeyCode.Space) && Time.time > _attackSpeed)
         {
             Attack();
         }
@@ -79,11 +78,8 @@ public class Player_Movement : MonoBehaviour
 
     void Attack()
     {
-
-        Debug.Log("this is working");
-
+        _attackSpeed = Time.time + _lastattacktime;
         Instantiate(_Lazer, transform.position + new Vector3(0, 0.8f, 0), Quaternion.identity); // Qutarnion.identity = defalt postion
-
     }
 
     public void TakeDamage()

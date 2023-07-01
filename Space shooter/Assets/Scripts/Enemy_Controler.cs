@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Data.Common;
 using UnityEngine;
+using UnityEngine.VFX;
 
 public class Enemy_Controler : MonoBehaviour
 {
@@ -39,9 +40,13 @@ public class Enemy_Controler : MonoBehaviour
             transform.Translate(Vector3.right * Time.deltaTime * moveSpeed);
         }
 
-        if(transform.position.y >= -6.5)
+        if(transform.position.y >= -6.5) // spawn range on droping past screen
         {
-            Destroy(gameObject);
+
+            float _randomRangeX = Random.Range(-9.5f, 10f);
+
+            transform.Translate(new Vector3 (_randomRangeX,7,0));
+
         }
         
 
@@ -52,6 +57,12 @@ public class Enemy_Controler : MonoBehaviour
 
     }
 
+    private void OnTriggerEnter(Collider other)
+    {
+
+        
+
+    }
     public void TakeDamage()
     {
         
