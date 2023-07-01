@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Reflection;
 using System.Runtime.CompilerServices;
+using System.Runtime.InteropServices;
 using UnityEngine;
 
 public class Spanw_Manager : MonoBehaviour
@@ -12,6 +13,8 @@ public class Spanw_Manager : MonoBehaviour
 
     [SerializeField]
     private GameObject _enemy;
+    public float maxNumberOfEmenys;
+
 
     void Start()
     {
@@ -20,13 +23,12 @@ public class Spanw_Manager : MonoBehaviour
 
     void Update()
     {
-    
-        if(Time.time > spawnTimer)
+
+        if (Time.time > spawnTimer && GameObject.FindGameObjectsWithTag("Enemy").Length < maxNumberOfEmenys)
         {
             spawnTimer = Time.time + _spawnSpeed;
-            //new Vector3(Random.Range(-9.5f, 10f), 0, 0);
 
-            Instantiate(_enemy, new Vector3(Random.Range(-9.5f, 10f), 0, 0), Quaternion.identity);
+            Instantiate(_enemy, new Vector3(Random.Range(-9.5f, 10f), 8, 0), Quaternion.identity);
 
         }
 

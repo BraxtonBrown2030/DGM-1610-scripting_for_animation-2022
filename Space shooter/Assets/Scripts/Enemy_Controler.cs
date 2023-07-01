@@ -29,26 +29,7 @@ public class Enemy_Controler : MonoBehaviour
 
     void Update()
     {
-        
-        if(transform.position.x >= -9.5f && transform.position.x <= 0f)
-        {
-            transform.Translate(Vector3.left * Time.deltaTime * moveSpeed);
-        }
-        
-        else if(transform.position.x <= 10f && transform.position.x >= 0f)
-        {
-            transform.Translate(Vector3.right * Time.deltaTime * moveSpeed);
-        }
-
-        if(transform.position.y >= -6.5) // spawn range on droping past screen
-        {
-
-            float _randomRangeX = Random.Range(-9.5f, 10f);
-
-            transform.Translate(new Vector3 (_randomRangeX,7,0));
-
-        }
-        
+        Movement();
 
         if(_lastAttackTime >= -_attackSpeed)
         {
@@ -61,6 +42,40 @@ public class Enemy_Controler : MonoBehaviour
     {
 
 
+
+    }
+
+    void Attack()
+    {
+
+    }
+
+    void Movement()
+    {
+
+        transform.Translate(Vector3.up * Time.deltaTime * moveSpeed);
+     /*
+        if(transform.position.x >= -9.5f && transform.position.x <= 0f)
+        {
+            transform.Translate(Vector3.left * Time.deltaTime * moveSpeed);
+            transform.Translate(Vector3.down * Time.deltaTime);
+        }
+        
+        else if(transform.position.x <= 10f && transform.position.x >= 0f)
+        {
+            transform.Translate(Vector3.right * Time.deltaTime * moveSpeed);
+            transform.Translate(Vector3.down * Time.deltaTime);
+        }
+     */
+
+        if(transform.position.y <= -6.5) // spawn range on droping past screen
+        {
+
+            float _randomRangeX = Random.Range(-9.5f, 10f);
+
+            transform.position = new Vector3 (_randomRangeX,8,0);
+
+        }
 
     }
 }

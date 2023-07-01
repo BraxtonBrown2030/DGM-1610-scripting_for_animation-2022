@@ -223,7 +223,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1965542657644153234, guid: 27fc6fac90361b9469b8705d2879cc98, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 3.2
+      value: 6.07
       objectReference: {fileID: 0}
     - target: {fileID: 1965542657644153234, guid: 27fc6fac90361b9469b8705d2879cc98, type: 3}
       propertyPath: m_LocalPosition.z
@@ -293,6 +293,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _enemy: {fileID: 1965542657644153257, guid: 27fc6fac90361b9469b8705d2879cc98, type: 3}
+  _MaxNumberOfEmenys: 12
 --- !u!4 &1417006216
 Transform:
   m_ObjectHideFlags: 0
