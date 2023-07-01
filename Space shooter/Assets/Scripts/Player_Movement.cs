@@ -28,6 +28,7 @@ public class Player_Movement : MonoBehaviour
     
     [SerializeField]
     private GameObject _Lazer;
+    public GameObject[] player;
 
     [Header("iteams")]
     public float _iteam;

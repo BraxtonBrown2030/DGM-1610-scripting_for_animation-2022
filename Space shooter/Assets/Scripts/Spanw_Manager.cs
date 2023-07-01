@@ -14,15 +14,21 @@ public class Spanw_Manager : MonoBehaviour
     [SerializeField]
     private GameObject _enemy;
     public float maxNumberOfEmenys;
+    private Player_Movement player;
+    private bool _StopSpawning = false;
+    
 
 
     void Start()
     {
-        
+
+        player = GameObject.Find("Player").GetComponent<Player_Movement>();
+
     }
 
     void Update()
     {
+
 
         if (Time.time > spawnTimer && GameObject.FindGameObjectsWithTag("Enemy").Length < maxNumberOfEmenys)
         {
