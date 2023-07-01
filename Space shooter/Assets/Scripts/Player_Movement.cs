@@ -8,6 +8,11 @@ using UnityEngine.UIElements;
 
 public class Player_Movement : MonoBehaviour
 {
+    [Header("Health")]
+    [SerializeField]
+    private int _Health;
+
+
     [Header("Player Movement")]
     private Rigidbody rb;
     private Vector2 movement;
@@ -85,5 +90,12 @@ public class Player_Movement : MonoBehaviour
     public void TakeDamage()
     {
         
+        _Health -= 1;
+
+        if(_Health < 1)
+        {
+            Destroy(this.gameObject);
+        }
+
     }
 }

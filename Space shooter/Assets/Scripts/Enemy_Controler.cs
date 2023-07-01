@@ -7,7 +7,7 @@ using UnityEngine.VFX;
 public class Enemy_Controler : MonoBehaviour
 {
     [Header("Movement")]
-    private int moveSpeed = -5;
+    private int moveSpeed = -1;
 
     [Header("Attack")]
     public int _damage;
@@ -41,7 +41,25 @@ public class Enemy_Controler : MonoBehaviour
     private void OnTriggerEnter(Collider other)
     {
 
+        Debug.Log("Hti: " + other.transform.name);
 
+        if(other.tag == "Player")
+        {
+            Player_Movement player = other.transform.GetComponent<Player_Movement>();
+
+            if (player != null)
+            {
+                player.TakeDamage();
+            }
+
+            Destroy(gameObject);
+        }
+
+        if(other.tag == "Lazer")
+        {
+            Destroy(other.gameObject);
+            Destroy(this.gameObject);
+        }
 
     }
 
