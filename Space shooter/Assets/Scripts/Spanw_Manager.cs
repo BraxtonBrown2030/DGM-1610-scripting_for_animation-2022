@@ -16,7 +16,12 @@ public class Spanw_Manager : MonoBehaviour
 
     [SerializeField]
     private GameObject _enemy;
+    [SerializeField]
+    private GameObject _enemySlide;
+
+    [Header("Types of enemys")]
     public float maxNumberOfEmenys;
+    public float maxSlide;
     private Player_Movement player;
     //private bool _StopSpawning = true;
     
@@ -30,7 +35,7 @@ public class Spanw_Manager : MonoBehaviour
 
     void Update()
     {
-
+        spawnTimer = Time.time + _spawnSpeed;
 
         if (Time.time > spawnTimer && GameObject.FindGameObjectsWithTag("Enemy").Length < maxNumberOfEmenys)
         {
@@ -38,6 +43,11 @@ public class Spanw_Manager : MonoBehaviour
 
             Instantiate(_enemy, new Vector3(Random.Range(-9.5f, 10f), 8, 0), Quaternion.identity);
 
+        }
+
+        if(Time.time > spawnTimer && GameObject.FindGameObjectsWithTag("Slide_Enemy").Length < maxSlide)
+        {
+            Instantiate(_enemySlide, new Vector3(Random.Range(-9.5f, 10f), 8, 0), Quaternion.identity);
         }
     }
     /*
