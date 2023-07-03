@@ -35,7 +35,7 @@ public class Spanw_Manager : MonoBehaviour
 
     void Update()
     {
-        spawnTimer = Time.time + _spawnSpeed;
+     
 
         if (Time.time > spawnTimer && GameObject.FindGameObjectsWithTag("Enemy").Length < maxNumberOfEmenys)
         {
@@ -45,8 +45,10 @@ public class Spanw_Manager : MonoBehaviour
 
         }
 
-        if(Time.time > spawnTimer && GameObject.FindGameObjectsWithTag("Slide_Enemy").Length < maxSlide)
+        if(Time.time > spawnTimer && GameObject.FindGameObjectsWithTag("Slide_enemy").Length < maxSlide)
         {
+            spawnTimer = Time.time + _spawnSpeed;
+
             Instantiate(_enemySlide, new Vector3(Random.Range(-9.5f, 10f), 8, 0), Quaternion.identity);
         }
     }
