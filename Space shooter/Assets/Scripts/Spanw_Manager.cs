@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Dynamic;
 using System.Reflection;
 using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
@@ -50,6 +51,9 @@ public class Spanw_Manager : MonoBehaviour
 
     public void OnPlayerDeath()
     {
+
         _StopSpawning = false;
+        maxNumberOfEmenys = 0;
+        GameObject.Destroy(_enemy);
     }
 }
