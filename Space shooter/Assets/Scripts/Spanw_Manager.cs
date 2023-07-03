@@ -3,7 +3,9 @@ using System.Collections.Generic;
 using System.Reflection;
 using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
+using TMPro;
 using UnityEngine;
+
 
 public class Spanw_Manager : MonoBehaviour
 {
@@ -15,14 +17,13 @@ public class Spanw_Manager : MonoBehaviour
     private GameObject _enemy;
     public float maxNumberOfEmenys;
     private Player_Movement player;
-    private bool _StopSpawning = false;
+    private bool _StopSpawning = true;
     
 
 
     void Start()
     {
 
-        player = GameObject.Find("Player").GetComponent<Player_Movement>();
 
     }
 
@@ -30,7 +31,7 @@ public class Spanw_Manager : MonoBehaviour
     {
 
 
-        if (Time.time > spawnTimer && GameObject.FindGameObjectsWithTag("Enemy").Length < maxNumberOfEmenys)
+        if (Time.time > spawnTimer && GameObject.FindGameObjectsWithTag("Enemy").Length < maxNumberOfEmenys && _StopSpawning == true)
         {
             spawnTimer = Time.time + _spawnSpeed;
 
@@ -38,6 +39,17 @@ public class Spanw_Manager : MonoBehaviour
 
         }
 
+         else if(_StopSpawning == false)
+        {
+           
+           // stops spawning
 
+        }
+
+    }
+
+    public void OnPlayerDeath()
+    {
+        _StopSpawning = false;
     }
 }

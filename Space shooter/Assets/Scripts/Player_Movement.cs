@@ -10,7 +10,7 @@ public class Player_Movement : MonoBehaviour
 {
     [Header("Health")]
     [SerializeField]
-    private int _Health;
+    public int _Health;
 
 
     [Header("Player Movement")]
@@ -29,6 +29,7 @@ public class Player_Movement : MonoBehaviour
     [SerializeField]
     private GameObject _Lazer;
     public GameObject[] player;
+    private Spanw_Manager _spawnManager;
 
     [Header("iteams")]
     public float _iteam;
@@ -37,6 +38,13 @@ public class Player_Movement : MonoBehaviour
     {
 
         rb = GetComponent<Rigidbody>();
+
+        _spawnManager = GameObject.Find("Spawn_Manager").GetComponent<Spanw_Manager>();
+
+        if(_spawnManager == null)
+        {
+            Debug.LogError("stop spowning");
+        }
         
     }
 
@@ -91,11 +99,12 @@ public class Player_Movement : MonoBehaviour
     public void TakeDamage()
     {
         
-        _Health -= 1;
+         _Health -= 1;
 
         if(_Health < 1)
         {
             Destroy(this.gameObject);
+            _spawnManager.OnPlayerDeath();
         }
 
     }
