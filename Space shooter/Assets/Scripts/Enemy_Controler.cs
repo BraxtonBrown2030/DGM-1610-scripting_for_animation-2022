@@ -7,7 +7,8 @@ using UnityEngine.VFX;
 public class Enemy_Controler : MonoBehaviour
 {
     [Header("Movement")]
-    private int moveSpeed = -1;
+    [SerializeField]
+    private int moveSpeed = -4;
 
     [Header("Attack")]
     public int _damage;

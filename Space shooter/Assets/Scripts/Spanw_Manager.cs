@@ -18,7 +18,7 @@ public class Spanw_Manager : MonoBehaviour
     private GameObject _enemy;
     public float maxNumberOfEmenys;
     private Player_Movement player;
-    private bool _StopSpawning = true;
+    //private bool _StopSpawning = true;
     
 
 
@@ -32,14 +32,15 @@ public class Spanw_Manager : MonoBehaviour
     {
 
 
-        if (Time.time > spawnTimer && GameObject.FindGameObjectsWithTag("Enemy").Length < maxNumberOfEmenys && _StopSpawning == true)
+        if (Time.time > spawnTimer && GameObject.FindGameObjectsWithTag("Enemy").Length < maxNumberOfEmenys)
         {
             spawnTimer = Time.time + _spawnSpeed;
 
             Instantiate(_enemy, new Vector3(Random.Range(-9.5f, 10f), 8, 0), Quaternion.identity);
 
         }
-
+    }
+    /*
          else if(_StopSpawning == false)
         {
            
@@ -56,4 +57,5 @@ public class Spanw_Manager : MonoBehaviour
         maxNumberOfEmenys = 0;
         GameObject.Destroy(_enemy);
     }
+    */
 }

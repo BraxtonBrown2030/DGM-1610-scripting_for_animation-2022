@@ -22,7 +22,7 @@ public class Player_Movement : MonoBehaviour
 
     [Header("Player Combat")]
     [SerializeField]
-    private float _attackSpeed = -1f;
+    private float _attackSpeed = -0.5f;
     private float _lastattacktime = 0.3f;
     public int damage;
     
@@ -104,7 +104,7 @@ public class Player_Movement : MonoBehaviour
         if(_Health < 1)
         {
             Destroy(this.gameObject);
-            _spawnManager.OnPlayerDeath();
+            //_spawnManager.OnPlayerDeath();
         }
 
     }

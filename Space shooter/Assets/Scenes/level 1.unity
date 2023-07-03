@@ -293,7 +293,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _enemy: {fileID: 1965542657644153257, guid: 27fc6fac90361b9469b8705d2879cc98, type: 3}
-  maxNumberOfEmenys: 0
+  maxNumberOfEmenys: 12
 --- !u!4 &1417006216
 Transform:
   m_ObjectHideFlags: 0
@@ -511,7 +511,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _Health: 3
   _speed: 5
-  _attackSpeed: -0.5
+  _attackSpeed: 1
   damage: 0
   _Lazer: {fileID: 1005801175696301232, guid: 416fe678fbeea6846a462d0a4e3f80a9, type: 3}
   player: []
