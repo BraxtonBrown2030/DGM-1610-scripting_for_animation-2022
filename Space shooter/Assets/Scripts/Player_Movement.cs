@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Runtime.CompilerServices;
+using TMPro;
 using UnityEngine;
 using UnityEngine.Monetization;
 using UnityEngine.UIElements;
@@ -31,8 +32,13 @@ public class Player_Movement : MonoBehaviour
     public GameObject[] player;
     private Spanw_Manager _spawnManager;
 
+    [SerializeField]
+    private GameObject _TrippleShot;
+
     [Header("iteams")]
     public float _iteam;
+
+    private bool _IstripleShot = false;
 
     void Start()
     {
@@ -93,7 +99,20 @@ public class Player_Movement : MonoBehaviour
     void Attack()
     {
         _attackSpeed = Time.time + _lastattacktime;
-        Instantiate(_Lazer, transform.position + new Vector3(0, 0.8f, 0), Quaternion.identity); // Qutarnion.identity = defalt postion
+
+        if(_IstripleShot == true)
+        {
+
+            Instantiate(_TrippleShot, transform.position, Quaternion.identity);
+
+        }
+        else
+        {
+            Instantiate(_Lazer, transform.position + new Vector3(0, 0.8f, 0), Quaternion.identity); // Qutarnion.identity = defalt postion
+        }
+        
+
+
     }
 
     public void TakeDamage()
