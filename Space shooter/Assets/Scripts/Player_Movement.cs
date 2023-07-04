@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 using TMPro;
 using UnityEngine;
+using UnityEngine.Analytics;
 using UnityEngine.Monetization;
 using UnityEngine.UIElements;
 
@@ -126,5 +127,17 @@ public class Player_Movement : MonoBehaviour
             //_spawnManager.OnPlayerDeath();
         }
 
+    }
+
+    public void TripleshotActive()
+    {
+        _IstripleShot = true;   
+        StartCoroutine(TripleShotPowerDownRutine());
+    }
+
+    IEnumerator TripleShotPowerDownRutine()
+    {
+        yield return new WaitForSeconds(5.0f);
+        _IstripleShot = false;
     }
 }
