@@ -32,6 +32,14 @@ public class PowerUp : MonoBehaviour
 
         if(other.tag == "Player")
         {
+
+            Player_Movement player = other.transform.GetComponent<Player_Movement>();
+
+            if(player != null)
+            {
+                player.TripleshotActive();
+            }
+
             Destroy(this.gameObject);
         }
 
