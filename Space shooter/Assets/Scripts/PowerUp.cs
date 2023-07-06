@@ -9,6 +9,9 @@ public class PowerUp : MonoBehaviour
     [SerializeField]
     private float _moveSpeed = 3;
 
+    private float _amountofpoweups;
+    private float _Numberofpowerups;
+
     void Start()
     {
         

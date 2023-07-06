@@ -8,7 +8,7 @@ using UnityEngine.UI;
 public class Scor_Manager : MonoBehaviour
 {
     public int _score;
-    public TextMeshProUGUI _Scroetext;
+    public Text _Scroetext;
 
 
     void Start()
