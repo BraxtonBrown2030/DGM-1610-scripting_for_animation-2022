@@ -42,6 +42,7 @@ public class Player_Movement : MonoBehaviour
     public float _iteam;
 
     private bool _IstripleShot = false;
+    public int _score;
 
     void Start()
     {
@@ -148,6 +149,7 @@ public class Player_Movement : MonoBehaviour
     public void AddScore(int potints)
     {
         _score += potints;
+        _UImanager.UpdateScore(_score);
         
     }
 }
