@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 using TMPro;
+using TMPro.EditorUtilities;
 using UnityEngine;
 using UnityEngine.Analytics;
 using UnityEngine.Monetization;
@@ -32,6 +33,7 @@ public class Player_Movement : MonoBehaviour
     private GameObject _Lazer;
     public GameObject[] player;
     private Spanw_Manager _spawnManager;
+    private Ui_Manager _UImanager;
 
     [SerializeField]
     private GameObject _TrippleShot;
@@ -45,6 +47,8 @@ public class Player_Movement : MonoBehaviour
     {
 
         rb = GetComponent<Rigidbody>();
+
+        _UImanager = GameObject.Find("UI_Manager").GetComponent<Ui_Manager>();
 
         _spawnManager = GameObject.Find("Spawn_Manager").GetComponent<Spanw_Manager>();
 
@@ -139,5 +143,11 @@ public class Player_Movement : MonoBehaviour
     {
         yield return new WaitForSeconds(5.0f);
         _IstripleShot = false;
+    }
+
+    public void AddScore(int potints)
+    {
+        _score += potints;
+        
     }
 }
