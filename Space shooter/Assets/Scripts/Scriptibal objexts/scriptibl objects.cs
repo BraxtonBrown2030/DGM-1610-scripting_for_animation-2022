@@ -7,9 +7,19 @@ public class scriptiblobjects : ScriptableObject
 
 {
 
+    public float amount;
+    public int moeney;
+
     void Start()
     {
         
+    }
+
+    public void UpdateAmount(float other)
+    {
+
+        amount += other; 
+
     }
 
 }
