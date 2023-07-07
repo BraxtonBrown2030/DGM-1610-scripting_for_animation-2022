@@ -209,7 +209,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   moveSpeed: 1
   lowerBound: -10
-  ScoreManager: {fileID: 0}
+  scoreManager: {fileID: 0}
 --- !u!114 &1849503427
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -240,7 +240,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   moveSpeed: 1
   lowerBound: -10
-  ScoreManager: {fileID: 0}
+  scoreManager: {fileID: 0}
 --- !u!1 &3154105305394356369
 GameObject:
   m_ObjectHideFlags: 0

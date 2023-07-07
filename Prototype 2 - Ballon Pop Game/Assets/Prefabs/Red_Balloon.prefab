@@ -13,7 +13,6 @@ GameObject:
   - component: {fileID: 8579780158349964750}
   - component: {fileID: 8579780158349964745}
   - component: {fileID: 1693851756958335620}
-  - component: {fileID: -6251615628929648316}
   - component: {fileID: 668834599}
   - component: {fileID: 668834600}
   m_Layer: 0
@@ -114,23 +113,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   moveSpeed: 1
   lowerBound: -10
-  ScoreManager: {fileID: 0}
---- !u!114 &-6251615628929648316
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8579780158349964744}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a8ca4b942a3be9a4e91b0924e27efcea, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  ScoreToGive: 100
-  ClickToPop: 3
-  scaleToIncrease: 0.1
-  ScoreManager: {fileID: 0}
+  scoreManager: {fileID: 0}
 --- !u!114 &668834599
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -161,7 +144,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   moveSpeed: 1
   lowerBound: -10
-  ScoreManager: {fileID: 0}
+  scoreManager: {fileID: 0}
 --- !u!1 &8579780158743614279
 GameObject:
   m_ObjectHideFlags: 0
