@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a272c9e515977fb409c8711104bada79, type: 3}
   m_Name: ballon types
   m_EditorClassIdentifier: 
-  _RedBalloon: 0
-  _BlueBalloon: 0
-  _GreenBalloon: 0
+  _RedBalloon: {fileID: 8579780158349964744, guid: f3dbca7a5b2ce9345abe856204f9b419, type: 3}
+  _BlueBalloon: {fileID: 6210234579122096094, guid: a643ebfe42b024146acb364aa0fbd740, type: 3}
+  _GreenBalloon: {fileID: 3154105305122952826, guid: e4120d89e4607844eaa1dfabd95bc90e, type: 3}
