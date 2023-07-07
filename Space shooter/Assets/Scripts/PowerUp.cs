@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using TreeEditor;
+using UnityEditor;
 using UnityEngine;
 
 public class PowerUp : MonoBehaviour
@@ -11,6 +12,8 @@ public class PowerUp : MonoBehaviour
 
     private float _amountofpoweups;
     private float _Numberofpowerups;
+
+    
 
     void Start()
     {
