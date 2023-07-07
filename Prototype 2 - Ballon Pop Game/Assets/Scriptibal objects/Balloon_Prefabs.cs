@@ -6,9 +6,9 @@ using UnityEngine;
 public class Balloon_Prefabs : ScriptableObject
 {
     
-    public float _RedBalloon;
-    public float _BlueBalloon;
-    public float _GreenBalloon;
+    public GameObject _RedBalloon;
+    public GameObject _BlueBalloon;
+    public GameObject _GreenBalloon;
 
     void Start()
     {
