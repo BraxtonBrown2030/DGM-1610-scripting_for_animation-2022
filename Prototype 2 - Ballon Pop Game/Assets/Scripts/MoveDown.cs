@@ -1,35 +1,46 @@
 using System.Collections;
 using System.Collections.Generic;
 using System.Runtime.InteropServices;
+using UnityEditor.UIElements;
 using UnityEngine;
 
 public class MoveDown : MonoBehaviour
 {
     public float moveSpeed = 1.0f;
+    public float sidemovespeed = 0.5f;
     public float lowerBound = -10.0f;
     public ScoreManager scoreManager; // variable to refeence the scoremanager script 
     private Balloon Balloon;
 
+
+    [SerializeField] Transform[] Points;
+    [SerializeField] private float pontsmoveSpeed;
+    private int pointsindex;
+
+    /*
     [Header("follow bounds")]
-    private float point_A_stop;
-    private float point_B_stop;
-    private float potin_C_stop;
+    private float point_A_stop = 4f;
+    private float point_B_stop = -1.1f;
+    private float potin_C_stop = -4f;
 
     [Header("Pathways")]
-    public GameObject pathwayA;
-    public GameObject pathwayB;
-    public GameObject pathwayC;
-
+    public Transform pathwayA;
+    public Transform pathwayB;
+    public Transform pathwayC;
+    */
     // Start is called before the first frame update
     void Start()
     {
         // Refrence ScoreManger Component
         scoreManager = GameObject.Find("ScoreManager").GetComponent<ScoreManager>();
 
-        pathwayA = GameObject.FindGameObjectWithTag("Point A");
-        pathwayB = GameObject.FindGameObjectWithTag("Point B");
-        pathwayC = GameObject.FindGameObjectWithTag("Point C");
+        transform.position = Points[pointsindex].transform.position;
 
+        /*
+        pathwayA = GameObject.FindGameObjectWithTag("Point A").GetComponent<Transform>();
+        pathwayB = GameObject.FindGameObjectWithTag("Point B").GetComponent<Transform>();
+        pathwayC = GameObject.FindGameObjectWithTag("Point C").GetComponent<Transform>();
+        */
         
         Balloon = GetComponent<Balloon>();
     }
@@ -47,5 +58,10 @@ public class MoveDown : MonoBehaviour
             scoreManager.DecreaseScoreText(Balloon.ScoreToGive);
             Destroy(gameObject);
         }
+    }
+    void FollowPotnts()
+    {
+
+       
     }
 }
