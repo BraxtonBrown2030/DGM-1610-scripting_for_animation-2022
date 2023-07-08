@@ -3,7 +3,11 @@ guid: f0d92e41e892b034b9f3b7111a80b39b
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2
-  defaultReferences: []
+  defaultReferences:
+  - scoreManager: {instanceID: 0}
+  - pathwayA: {fileID: 2917796808278162667, guid: ace35085e28a7444aa905965c8c7e138, type: 3}
+  - pathwayB: {fileID: 2241328179041611224, guid: a6fcc0c951e95b44197d2aa21b5b78d0, type: 3}
+  - pathwayC: {fileID: 3635100905007630784, guid: dd8184b942ddc5e40b0d6229382a8cce, type: 3}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 
