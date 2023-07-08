@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Drawing;
 using System.Runtime.InteropServices;
 using UnityEditor.UIElements;
 using UnityEngine;
@@ -57,11 +58,18 @@ public class MoveDown : MonoBehaviour
         {
             scoreManager.DecreaseScoreText(Balloon.ScoreToGive);
             Destroy(gameObject);
+        } 
+
+        if(pointsindex <= Points.Length -1)
+        {   
+            transform.position = Vector3.MoveTowards(transform.position, Points[pointsindex].transform.position, sidemovespeed * Time.deltaTime);
+
+            if(transform.position == Points[pointsindex].transform.position)
+            {
+                pointsindex += 1;
+            }
+
         }
     }
-    void FollowPotnts()
-    {
 
-       
-    }
 }
