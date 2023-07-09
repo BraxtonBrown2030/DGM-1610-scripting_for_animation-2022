@@ -35,7 +35,7 @@ public class MoveDown : MonoBehaviour
         // Refrence ScoreManger Component
         scoreManager = GameObject.Find("ScoreManager").GetComponent<ScoreManager>();
 
-        transform.position = Points[pointsindex].transform.position;
+        //transform.position = Points[pointsindex].transform.position;
 
         /*
         pathwayA = GameObject.FindGameObjectWithTag("Point A").GetComponent<Transform>();
@@ -60,6 +60,7 @@ public class MoveDown : MonoBehaviour
             Destroy(gameObject);
         } 
 
+        /*
         if(pointsindex <= Points.Length -1)
         {   
             transform.position = Vector3.MoveTowards(transform.position, Points[pointsindex].transform.position, sidemovespeed * Time.deltaTime);
@@ -70,6 +71,7 @@ public class MoveDown : MonoBehaviour
             }
 
         }
+        */
     }
 
 }
