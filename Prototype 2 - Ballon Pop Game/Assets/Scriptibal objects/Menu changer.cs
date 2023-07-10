@@ -3,7 +3,9 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class Mainmenu : MonoBehaviour
+
+[CreateAssetMenu]
+public class Menuchanger : ScriptableObject
 {
 
     public Scene secnetoload;
@@ -11,13 +13,11 @@ public class Mainmenu : MonoBehaviour
     void Start()
     {
         
-    
-
     }
 
-
-    void QuitGame()
+    // Update is called once per frame
+    void Update()
     {
-        Application.Quit();
+        
     }
 }
