@@ -596,6 +596,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1522271585}
   - component: {fileID: 1522271584}
+  - component: {fileID: 1522271586}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -610,7 +611,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1522271583}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5596feb5b952c16409f821417c7c6eef, type: 3}
   m_Name: 
@@ -675,6 +676,22 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1522271586
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1522271583}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5d1c7c7ba645ed546842dfb77fdd2952, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: 0
+  red_Balloon: {fileID: 0}
+  blue_Balloon: {fileID: 0}
+  secneReset: {fileID: 0}
 --- !u!1 &1776286104
 GameObject:
   m_ObjectHideFlags: 0
@@ -1110,7 +1127,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3154105305122952710, guid: e4120d89e4607844eaa1dfabd95bc90e, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -9.83
+      value: -8.81
       objectReference: {fileID: 0}
     - target: {fileID: 3154105305122952710, guid: e4120d89e4607844eaa1dfabd95bc90e, type: 3}
       propertyPath: m_LocalPosition.z
