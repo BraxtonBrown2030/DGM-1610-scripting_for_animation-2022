@@ -32,10 +32,9 @@ public class Offscreenballoon : ScriptableObject
 
 
     }
-    void SecneReset()
+     public void SecneReset()
     {
 
-
-
+        SceneManager.LoadScene("BalloonGame");
     }
 }
