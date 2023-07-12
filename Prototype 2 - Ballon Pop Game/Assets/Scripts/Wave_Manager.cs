@@ -5,40 +5,45 @@ using TMPro;
 using UnityEditor.SceneManagement;
 using UnityEngine.SceneManagement;
 using System.ComponentModel.Design.Serialization;
+using UnityEngine.SocialPlatforms.Impl;
 
 public class Wave_Manager : MonoBehaviour
 {
     public int wave;
     public TextMeshProUGUI wavetext;
-    public int amount;
+    public float amount = 1;
+    public float wavetime;
     
     void Start()
     {
-        UpdateWave();
+        
 
     }
 
 
     void Update()
     {
-        if(wave == 0)
+
+        wavetime = Time.time;
+        Debug.Log(wavetime);
+
+        if(wavetime <= 1)
         {
-
             UpdateWave();
-
         }
-
 
     }
 
+    
     public void UpdateWave()
     {
         
-        wavetext.text = "Wave:  " + wave;
-        wave += amount;
+        wavetext.text = "wave: " + wave;
+        wavetime =wave;
+
 
     }
-
+    /*
     public void IncreaseWave(int amount)
     {
 
@@ -46,5 +51,5 @@ public class Wave_Manager : MonoBehaviour
         UpdateWave();
 
     }
-
+    */
 }
