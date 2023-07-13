@@ -6,7 +6,7 @@ using UnityEngine;
 public class Enemy_Lazer : MonoBehaviour
 {
     [SerializeField]
-    private float _LazerSpeed = 2;
+    private float _LazerSpeed = 1.3f;
 
     void Start()
     {
