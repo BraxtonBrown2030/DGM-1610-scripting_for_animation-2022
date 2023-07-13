@@ -19,9 +19,12 @@ public class Spanw_Manager : MonoBehaviour
     [SerializeField]
     private GameObject _enemySlide;
 
+    [SerializeField] private GameObject _Topenemy;
+
     [Header("Types of enemys")]
     public float maxNumberOfEmenys;
     public float maxSlide;
+    public float maxTop;
     private Player_Movement player;
     //private bool _StopSpawning = true;
     
@@ -50,6 +53,15 @@ public class Spanw_Manager : MonoBehaviour
             spawnTimer = Time.time + _spawnSpeed;
 
             Instantiate(_enemySlide, new Vector3(Random.Range(-9.5f, 10f), 8, 0), Quaternion.identity);
+        }
+
+        if(Time.time > spawnTimer && GameObject.FindGameObjectsWithTag("Topenemy").Length < maxTop);
+
+        {
+            spawnTimer = Time.time + _spawnSpeed;
+
+            Instantiate(_Topenemy, new);
+
         }
     }
     /*
