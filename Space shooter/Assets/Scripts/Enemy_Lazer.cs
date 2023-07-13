@@ -16,9 +16,10 @@ public class Enemy_Lazer : MonoBehaviour
 
     void Update()
     {
+
         transform.Translate(Vector3.down *_LazerSpeed * Time.deltaTime);
 
-        if(transform.position.y > -8f)
+        if(transform.position.y < -8f)
         {
             Destroy(gameObject);
         }

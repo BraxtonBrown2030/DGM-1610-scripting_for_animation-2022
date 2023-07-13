@@ -54,15 +54,16 @@ public class Spanw_Manager : MonoBehaviour
 
             Instantiate(_enemySlide, new Vector3(Random.Range(-9.5f, 10f), 8, 0), Quaternion.identity);
         }
-
+        /*
         if(Time.time > spawnTimer && GameObject.FindGameObjectsWithTag("Topenemy").Length < maxTop);
 
         {
             spawnTimer = Time.time + _spawnSpeed;
 
-            Instantiate(_Topenemy, new);
+           
 
         }
+        */
     }
     /*
          else if(_StopSpawning == false)

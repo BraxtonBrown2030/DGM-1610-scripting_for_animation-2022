@@ -16,8 +16,8 @@ public class Enemy_Top : MonoBehaviour
     public Transform pointB;
     public float stopDistance;
     public float speed = 2;
-    public float _timetoshot;
-    public float _shoorscooldown;
+    public float _Attackspeed = -0.5f;
+    public float _LastAttackTime = 0.3f ;
 
     void Start()
     {
@@ -50,13 +50,13 @@ public class Enemy_Top : MonoBehaviour
         else if(Vector3.Distance(transform.position, pointB.position) == stopDistance)
         {
 
-             transform.position = Vector3.MoveTowards(transform.position, pointA.position, speed * Time.deltaTime);
+            transform.position = Vector3.MoveTowards(transform.position, pointA.position, speed * Time.deltaTime);
 
 
         }
 
 
-        if(_timetoshot >= _shoorscooldown)
+        if( Time.time >= _Attackspeed)
         {
 
             Attack();
@@ -71,8 +71,9 @@ public class Enemy_Top : MonoBehaviour
     void Attack()
     {
  
+        _Attackspeed = Time.time + _LastAttackTime;
 
-        Instantiate(_lazer,transform.position, Quaternion.identity);
+        Instantiate(_lazer, transform.position + new Vector3(0,-0.8f,0), Quaternion.identity);
 
 
     }
