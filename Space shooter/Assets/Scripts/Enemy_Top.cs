@@ -10,11 +10,18 @@ public class Enemy_Top : MonoBehaviour
     public float health;
     public float danamge;
     public GameObject _lazer;
+    public float _UpSpeed = 1;
+    public bool antimation = false;
+    public Transform pointA;
+    public Transform pointB;
+    public float stopDistance;
+    public float speed = 2;
     
 
     void Start()
     {
-
+        pointA = GameObject.FindGameObjectWithTag("PointA").GetComponent<Transform>();
+        pointB = GameObject.FindGameObjectWithTag("PointB").GetComponent<Transform>();
         
 
     }
@@ -24,10 +31,25 @@ public class Enemy_Top : MonoBehaviour
     {
         
 
-        if(transform.position.y == 9)
+        if(transform.position.y <= 5.5f)
         {
 
-            transform.Translate(0,9,0);
+            transform.Translate(Vector3.up * Time.deltaTime * _UpSpeed);
+
+        }
+
+        if(Vector3.Distance(transform.position, pointA.position) == stopDistance)
+        {
+
+            transform.position = Vector3.MoveTowards(transform.position, pointB.position, speed * Time.deltaTime);
+
+            Debug.Log("movement works");
+
+        }
+        else if(Vector3.Distance(transform.position, pointB.position) == stopDistance)
+        {
+
+            
 
         }
 

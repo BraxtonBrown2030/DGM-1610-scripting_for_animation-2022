@@ -21,6 +21,7 @@ public class Enemy_Controler : MonoBehaviour
 
     [Header("Game_Objects")]
     public GameObject _Lootdrop;
+    public GameObject _TopEnemy;
  
     void Start()
     {

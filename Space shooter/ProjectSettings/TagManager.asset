@@ -8,6 +8,7 @@ TagManager:
   - Enemy
   - Slide_enemy
   - Enemy_Lazer
+  - Top enemy
   layers:
   - Default
   - TransparentFX
