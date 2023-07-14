@@ -589,8 +589,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _enemy: {fileID: 1965542657644153257, guid: 27fc6fac90361b9469b8705d2879cc98, type: 3}
   _enemySlide: {fileID: 6934360643130461146, guid: 4542ca9e749fc174f8ac0437aefffe05, type: 3}
+  _Topenemy: {fileID: 0}
   maxNumberOfEmenys: 5
   maxSlide: 4
+  maxTop: 0
 --- !u!4 &1417006216
 Transform:
   m_ObjectHideFlags: 0
@@ -1120,8 +1122,28 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 952850491360048072, guid: a0be71ee8e3ce6343b760e332ebcedbd, type: 3}
+      propertyPath: _lazer
+      value: 
+      objectReference: {fileID: 3725162726745955721, guid: cf097c51f95a4114ab2bf5d99a5d7f6e, type: 3}
+    - target: {fileID: 952850491360048072, guid: a0be71ee8e3ce6343b760e332ebcedbd, type: 3}
+      propertyPath: pointA
+      value: 
+      objectReference: {fileID: 585794831}
+    - target: {fileID: 952850491360048072, guid: a0be71ee8e3ce6343b760e332ebcedbd, type: 3}
+      propertyPath: pointB
+      value: 
+      objectReference: {fileID: 1063421183}
+    - target: {fileID: 952850491360048072, guid: a0be71ee8e3ce6343b760e332ebcedbd, type: 3}
       propertyPath: _UpSpeed
       value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 952850491360048072, guid: a0be71ee8e3ce6343b760e332ebcedbd, type: 3}
+      propertyPath: _Attackspeed
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 952850491360048072, guid: a0be71ee8e3ce6343b760e332ebcedbd, type: 3}
+      propertyPath: _LastAttackTime
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6002050834126675369, guid: a0be71ee8e3ce6343b760e332ebcedbd, type: 3}
       propertyPath: m_Name

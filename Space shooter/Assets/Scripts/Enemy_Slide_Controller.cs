@@ -10,9 +10,9 @@ public class Enemy_Slide_Controller : MonoBehaviour
     private float _Health;
 
     [Header("movement / Attacks")]
-    private int _Movespeed = -4;
+    private int _Movespeed = -1;
     private float _Attackspeed = -0.5f;
-    private float _LasttAttackTime = 0.3f;
+    private float _LasttAttackTime = 1f;
 
     [Header("Scripts")]
     Spanw_Manager spanw_Manager;
@@ -63,6 +63,12 @@ public class Enemy_Slide_Controller : MonoBehaviour
         {
             Destroy(other.gameObject);
             Destroy(this.gameObject);
+            if(maxnumberoftop <= 0 && spawntimeer > spawntime)
+            {
+
+                Instantiate()
+
+            }
         }
 
     }
