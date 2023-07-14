@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Runtime.CompilerServices;
 using TreeEditor;
 using UnityEngine;
 
@@ -23,5 +24,27 @@ public class Enemy_Lazer : MonoBehaviour
         {
             Destroy(gameObject);
         }
+    
+    
     }
+    
+    private void OnTriggerEnter(Collider other)
+    {
+
+        if(other.tag == "Player")
+        {
+
+            Player_Movement player = other.transform.GetComponent<Player_Movement>();
+
+            if(player != null)
+            {
+
+                player.TakeDamage();
+
+            }
+
+        }
+
+    }
+
 }

@@ -43,7 +43,7 @@ public class Enemy_Controler : MonoBehaviour
     private void OnTriggerEnter(Collider other)
     {
 
-        Debug.Log("Hti: " + other.transform.name);
+        Debug.Log("Hit: " + other.transform.name);
 
         if(other.tag == "Player")
         {

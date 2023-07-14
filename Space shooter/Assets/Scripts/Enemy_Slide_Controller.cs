@@ -71,12 +71,7 @@ public class Enemy_Slide_Controller : MonoBehaviour
         {
             Destroy(other.gameObject);
             Destroy(this.gameObject);
-            if(maxtop <= 1 && spawntimer > spawntime)
-            {
-
-                Instantiate(_Topenemy, transform.position, Quaternion.identity);
-
-            }
+          
         }
 
     }

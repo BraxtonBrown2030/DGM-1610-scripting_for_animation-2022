@@ -155,13 +155,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c9b8c53c9f4564940b7029d667bc10bb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  moveSpeed: -4
   _damage: 0
   _attackSpeed: 0
   _lastAttackTime: 10
   _totalHeath: 0
   _curHealth: 0
-  _player: {fileID: 0}
   _Lootdrop: {fileID: 0}
+  _TopEnemy: {fileID: 0}
 --- !u!65 &133756640
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -539,7 +540,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fcb3935e51483f24888d4abe63aab0b2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _damage: 0
+  _Health: 0
+  _speed: 0
+  _attackSpeed: -0.5
+  damage: 0
+  _Lazer: {fileID: 0}
+  player: []
+  _TrippleShot: {fileID: 0}
+  _iteam: 0
+  _score: 0
 --- !u!1 &1494171068
 GameObject:
   m_ObjectHideFlags: 0
