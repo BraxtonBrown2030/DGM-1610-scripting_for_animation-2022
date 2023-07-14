@@ -12,6 +12,7 @@ public class Spanw_Manager : MonoBehaviour
 {
 
     private float spawnTimer = 1f;
+    private float spawnTimertop = 5;
     private float _spawnSpeed = 1f;
 
     [SerializeField]
@@ -54,6 +55,16 @@ public class Spanw_Manager : MonoBehaviour
 
             Instantiate(_enemySlide, new Vector3(Random.Range(-9.5f, 10f), 8, 0), Quaternion.identity);
         }
+
+
+        if(maxTop <=0 && Time.time < spawnTimertop)
+        {
+
+            Instantiate(_Topenemy, new Vector3(Random.Range(-9.5f, 10f), 4.0f, 0), Quaternion.identity);
+
+        }
+
+
         /*
         if(Time.time > spawnTimer && GameObject.FindGameObjectsWithTag("Topenemy").Length < maxTop);
 

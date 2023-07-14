@@ -61,6 +61,8 @@ public class Enemy_Controler : MonoBehaviour
         {
             Destroy(other.gameObject);
             Destroy(this.gameObject);
+
+            
             
         }
 
