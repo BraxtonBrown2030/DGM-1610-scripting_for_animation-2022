@@ -109,3 +109,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _Lazer: {fileID: 3725162726745955721, guid: cf097c51f95a4114ab2bf5d99a5d7f6e, type: 3}
+  _Topenemy: {fileID: 6002050834126675369, guid: a0be71ee8e3ce6343b760e332ebcedbd, type: 3}
+  maxtop: 1
+  spawntimer: 1
+  spawntime: 1

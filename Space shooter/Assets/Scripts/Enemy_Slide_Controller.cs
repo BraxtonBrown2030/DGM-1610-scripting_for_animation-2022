@@ -20,12 +20,18 @@ public class Enemy_Slide_Controller : MonoBehaviour
     [Header("GameObjects")]
     [SerializeField]
     private GameObject _Lazer;
+    public GameObject _Topenemy;
+    public float maxtop = 1f;
+
+    
+    public float spawntimer = 1;
+    public float spawntime = 1f;
 
 
     void Start()
     {
         
-
+        maxtop = GameObject.FindGameObjectsWithTag("Top enemy").Length;
 
     }
 
@@ -39,6 +45,8 @@ public class Enemy_Slide_Controller : MonoBehaviour
         {
             Attack();
         }
+
+        
 
 
     }
@@ -63,10 +71,10 @@ public class Enemy_Slide_Controller : MonoBehaviour
         {
             Destroy(other.gameObject);
             Destroy(this.gameObject);
-            if(maxnumberoftop <= 0 && spawntimeer > spawntime)
+            if(maxtop <= 1 && spawntimer > spawntime)
             {
 
-                Instantiate()
+                Instantiate(_Topenemy, transform.position, Quaternion.identity);
 
             }
         }
