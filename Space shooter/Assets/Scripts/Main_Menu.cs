@@ -6,22 +6,23 @@ using UnityEngine.SceneManagement;
 public class Main_Menu : MonoBehaviour
 {
 
-    public int _MainMenu;
+    public int _Gamescene;
 
 
     // Start is called before the first frame update
-    void Start()
+    public void StartGame()
     {
         
-     SceneManager.LoadScene(_MainMenu);
+     SceneManager.LoadScene(_Gamescene);
      Debug.Log("load working");
 
     }
 
     // Update is called once per frame
-    void Quit()
+    public void Quit()
     {
         Application.Quit();
+        Debug.Log("Game Quit");
 
     }
 }
