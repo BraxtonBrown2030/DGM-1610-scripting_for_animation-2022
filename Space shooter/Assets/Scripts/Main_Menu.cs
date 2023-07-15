@@ -7,9 +7,9 @@ public class Main_Menu : MonoBehaviour
 {
 
     public int _Gamescene;
+    public int _Settings;
+    public int _MainMenu;
 
-
-    // Start is called before the first frame update
     public void StartGame()
     {
         
@@ -18,11 +18,25 @@ public class Main_Menu : MonoBehaviour
 
     }
 
-    // Update is called once per frame
     public void Quit()
     {
         Application.Quit();
         Debug.Log("Game Quit");
+
+    }
+
+
+    public void Settings()
+    {
+
+        SceneManager.LoadScene(_Settings);
+
+    }
+
+    public void Back()
+    {
+
+        SceneManager.LoadScene(_MainMenu);
 
     }
 }
