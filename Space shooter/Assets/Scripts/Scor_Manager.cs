@@ -10,9 +10,12 @@ public class Scor_Manager : MonoBehaviour
     public int _score;
     public Text _Scroetext;
 
+    private float player;
+
 
     void Start()
     {
+
         UpdateScoreText();   
     }
 

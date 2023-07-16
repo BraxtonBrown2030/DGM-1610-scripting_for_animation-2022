@@ -4,6 +4,7 @@ using System.Dynamic;
 using System.Reflection;
 using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
+using System.Threading;
 using TMPro;
 using UnityEngine;
 
@@ -29,11 +30,17 @@ public class Spanw_Manager : MonoBehaviour
     private Player_Movement player;
     //private bool _StopSpawning = true;
     
+    private float numberofenemys;
+    private float spawnMulty;
+    private float wavenumber;
 
 
     void Start()
     {
 
+        numberofenemys = GameObject.FindGameObjectsWithTag("Top_enemy" + "slide enemey" + "Fall enemey").Length;
+
+        wavenumber = Time.time * wavenumber;
 
     }
 
@@ -57,7 +64,7 @@ public class Spanw_Manager : MonoBehaviour
         }
 
 
-        if(maxTop <=0 && Time.time < spawnTimertop)
+        if(Time.time > spawnTimer && numberofenemys <= 10)
         {
 
             Instantiate(_Topenemy, new Vector3(Random.Range(-9.5f, 10f), 4.0f, 0), Quaternion.identity);

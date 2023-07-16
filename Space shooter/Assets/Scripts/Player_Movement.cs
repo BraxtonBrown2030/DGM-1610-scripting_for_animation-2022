@@ -34,6 +34,7 @@ public class Player_Movement : MonoBehaviour
     public GameObject[] player;
     private Spanw_Manager _spawnManager;
     private Ui_Manager _UImanager;
+    private Scor_Manager _scoremanager;
 
     [SerializeField]
     private GameObject _TrippleShot;
@@ -52,6 +53,9 @@ public class Player_Movement : MonoBehaviour
         _UImanager = GameObject.Find("UI_Manager").GetComponent<Ui_Manager>();
 
         _spawnManager = GameObject.Find("Spawn_Manager").GetComponent<Spanw_Manager>();
+
+        _scoremanager = GameObject.Find("Scormanager").GetComponent<Scor_Manager>();
+
 
         if(_spawnManager == null)
         {
