@@ -43,6 +43,8 @@ public class Enemy_Lazer : MonoBehaviour
 
             }
 
+            Destroy(this.gameObject);
+
         }
 
     }

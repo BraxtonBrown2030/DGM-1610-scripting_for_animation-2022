@@ -15,17 +15,14 @@ public class Emeny_death : ScriptableObject
     void Start()
     {
         
+
+
     }
 
     
     void Update()
     {
         
-        if()
-        {
-
-
-        }
 
 
     }

@@ -44,6 +44,7 @@ public class PowerUp : MonoBehaviour
             if(player != null)
             {
                 player.TripleshotActive();
+                Debug.Log("Triple shot active");
             }
 
             Destroy(this.gameObject);

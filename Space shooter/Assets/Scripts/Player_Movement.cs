@@ -50,18 +50,12 @@ public class Player_Movement : MonoBehaviour
 
         rb = GetComponent<Rigidbody>();
 
-        _UImanager = GameObject.Find("UI_Manager").GetComponent<Ui_Manager>();
+        //_UImanager = GameObject.Find("UI_Manager").GetComponent<Ui_Manager>();
 
-        _spawnManager = GameObject.Find("Spawn_Manager").GetComponent<Spanw_Manager>();
+        //_spawnManager = GameObject.Find("Spawn_Manager").GetComponent<Spanw_Manager>();
 
-        _scoremanager = GameObject.Find("Scormanager").GetComponent<Scor_Manager>();
+      //  _scoremanager = GameObject.Find("Scormanager").GetComponent<Scor_Manager>();
 
-
-        if(_spawnManager == null)
-        {
-            Debug.LogError("stop spowning");
-        }
-        
     }
 
 

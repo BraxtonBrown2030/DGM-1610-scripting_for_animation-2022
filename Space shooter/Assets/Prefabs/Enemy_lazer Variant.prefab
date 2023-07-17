@@ -17,7 +17,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1005801175696301233, guid: 416fe678fbeea6846a462d0a4e3f80a9, type: 3}
       propertyPath: m_Enabled
-      value: 0
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1005801175696301233, guid: 416fe678fbeea6846a462d0a4e3f80a9, type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1005801175696301236, guid: 416fe678fbeea6846a462d0a4e3f80a9, type: 3}
       propertyPath: m_RootOrder
