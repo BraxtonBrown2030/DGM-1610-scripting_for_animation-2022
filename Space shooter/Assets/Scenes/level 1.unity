@@ -715,7 +715,7 @@ BoxCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1807588869}
   m_Material: {fileID: 0}
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
@@ -915,6 +915,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Top enemy
       objectReference: {fileID: 0}
+    - target: {fileID: 6415263326818510832, guid: a0be71ee8e3ce6343b760e332ebcedbd, type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8381611771083862973, guid: a0be71ee8e3ce6343b760e332ebcedbd, type: 3}
       propertyPath: m_RootOrder
       value: 9
@@ -974,7 +978,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7326632429029464622, guid: 5e1f685c3140caf479d2b076825625f9, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 2.43
+      value: -0.4
       objectReference: {fileID: 0}
     - target: {fileID: 7326632429029464622, guid: 5e1f685c3140caf479d2b076825625f9, type: 3}
       propertyPath: m_LocalPosition.y

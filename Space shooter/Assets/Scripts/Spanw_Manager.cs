@@ -38,8 +38,6 @@ public class Spanw_Manager : MonoBehaviour
     void Start()
     {
 
-       //numberofenemys = GameObject.FindGameObjectsWithTag("Top_enemy" + "slide enemey" + "Fall enemey").Length;
-
         wavenumber = Time.time * wavenumber;
 
     }
