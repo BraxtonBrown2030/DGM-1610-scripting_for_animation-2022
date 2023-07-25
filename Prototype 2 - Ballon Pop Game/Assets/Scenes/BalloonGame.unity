@@ -134,6 +134,7 @@ GameObject:
   - component: {fileID: 21488822}
   - component: {fileID: 21488824}
   - component: {fileID: 21488823}
+  - component: {fileID: 21488825}
   m_Layer: 5
   m_Name: Timer
   m_TagString: Untagged
@@ -180,7 +181,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Time
+  m_text: 'Timer:'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -257,6 +258,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 21488821}
   m_CullTransparentMesh: 1
+--- !u!114 &21488825
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 21488821}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 81dede686d935c74c808691519633b3b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  timeText: {fileID: 21488823}
+  timeerNumber: 0
 --- !u!1 &90566033
 GameObject:
   m_ObjectHideFlags: 0
@@ -304,6 +319,8 @@ MonoBehaviour:
   - {fileID: 6210234579122096094, guid: a643ebfe42b024146acb364aa0fbd740, type: 3}
   - {fileID: 3154105305122952826, guid: e4120d89e4607844eaa1dfabd95bc90e, type: 3}
   - {fileID: 8579780158349964744, guid: f3dbca7a5b2ce9345abe856204f9b419, type: 3}
+  animations:
+  - {fileID: 0}
   startDelay: 0.5
   spawnInterval: 1.5
 --- !u!1 &280190172
@@ -405,6 +422,7 @@ MonoBehaviour:
   wavetext: {fileID: 1945401194}
   amount: 0
   wavetime: 0
+  scoreManager: {fileID: 0}
 --- !u!4 &868580398
 Transform:
   m_ObjectHideFlags: 0
@@ -626,7 +644,7 @@ GameObject:
   - component: {fileID: 1776286106}
   m_Layer: 0
   m_Name: ScoreManager
-  m_TagString: Untagged
+  m_TagString: Score Manager
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -795,9 +813,9 @@ RectTransform:
   m_Father: {fileID: 1094549864}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -211, y: 256}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 112, y: -61}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1945401194
@@ -1097,6 +1115,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1126104870, guid: a643ebfe42b024146acb364aa0fbd740, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6210234579122096090, guid: a643ebfe42b024146acb364aa0fbd740, type: 3}
       propertyPath: m_RootOrder
       value: 3

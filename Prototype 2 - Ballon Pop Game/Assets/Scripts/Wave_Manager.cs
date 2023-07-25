@@ -6,6 +6,7 @@ using UnityEditor.SceneManagement;
 using UnityEngine.SceneManagement;
 using System.ComponentModel.Design.Serialization;
 using UnityEngine.SocialPlatforms.Impl;
+using System.Threading;
 
 public class Wave_Manager : MonoBehaviour
 {
@@ -13,10 +14,12 @@ public class Wave_Manager : MonoBehaviour
     public TextMeshProUGUI wavetext;
     public float amount = 1;
     public float wavetime;
+    public ScoreManager scoreManager;
     
     void Start()
     {
         
+        scoreManager = GameObject.FindGameObjectWithTag("Score Manager").GetComponent<ScoreManager>();
 
     }
 
@@ -24,12 +27,38 @@ public class Wave_Manager : MonoBehaviour
     void Update()
     {
 
-        wavetime = Time.time;
+        Time.timeScale = 0.5f;
+
         Debug.Log(wavetime);
+
+        wavetime = Time.time;
 
         if(wavetime <= 1)
         {
             UpdateWave();
+        }
+
+        if(scoreManager.score == 1000)
+        {
+
+            wave = 1;
+            UpdateWave();
+
+        }
+                if(scoreManager.score == 5000)
+        {
+
+            wave = 2;
+            UpdateWave();
+
+        }
+
+                if(scoreManager.score == 10000)
+        {
+
+            wave = 3;
+            UpdateWave();
+            
         }
 
     }
@@ -39,17 +68,16 @@ public class Wave_Manager : MonoBehaviour
     {
         
         wavetext.text = "wave: " + wave;
-        wavetime =wave;
+        wavetime = wave;
 
 
     }
-    /*
-    public void IncreaseWave(int amount)
+
+    public void Awake()
     {
 
-        wave += amount;
-        UpdateWave();
+
 
     }
-    */
+
 }

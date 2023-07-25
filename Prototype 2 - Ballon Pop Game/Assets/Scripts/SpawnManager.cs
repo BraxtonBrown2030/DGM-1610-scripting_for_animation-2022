@@ -5,6 +5,7 @@ using UnityEngine;
 public class SpawnManager : MonoBehaviour
 {
     public GameObject[] balloonPrefabs;
+    public Animation[] animations;
     //public int balloonIndex;
     public float startDelay = 0.5f;
     public float spawnInterval = 1.5f;

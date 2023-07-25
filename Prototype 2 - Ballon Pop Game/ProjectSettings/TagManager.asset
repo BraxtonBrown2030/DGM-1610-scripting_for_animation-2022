@@ -7,6 +7,7 @@ TagManager:
   - Point A
   - Point B
   - Point C
+  - Score Manager
   layers:
   - Default
   - TransparentFX

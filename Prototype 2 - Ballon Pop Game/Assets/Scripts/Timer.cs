@@ -2,18 +2,32 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Data.Common;
 using UnityEngine;
+using TMPro;
 
-[CreateAssetMenu]
-public class Timer : ScriptableObject
+public class Timer : MonoBehaviour
 {
    
-    public float timer = Time.time;
+    public TextMeshProUGUI timeText;
+    public float timeerNumber;
+
+
+    public void Start()
+    {
+
+
+
+    }
 
 
     public void Update()
     {
 
-        
+        timeerNumber = Time.time;
+
+       timeerNumber = Mathf.Round(timeerNumber * 10.0f) * 0.1f;
+
+        timeText.text = "Timer:  " + timeerNumber;
+
     }
 
 }
