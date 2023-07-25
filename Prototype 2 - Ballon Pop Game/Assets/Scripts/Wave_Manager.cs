@@ -29,7 +29,7 @@ public class Wave_Manager : MonoBehaviour
 
         Time.timeScale = 0.5f;
 
-        Debug.Log(wavetime);
+        //Debug.Log(wavetime);
 
         wavetime = Time.time;
 

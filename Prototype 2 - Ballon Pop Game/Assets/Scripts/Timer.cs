@@ -24,7 +24,7 @@ public class Timer : MonoBehaviour
 
         timeerNumber = Time.time / 0.6f;
 
-       timeerNumber = Mathf.Round(timeerNumber * 10.0f) * 0.1f;
+        timeerNumber = Mathf.Round(timeerNumber * 10.0f) * 0.1f;
 
         timeText.text = "Timer:  " + timeerNumber;
 
