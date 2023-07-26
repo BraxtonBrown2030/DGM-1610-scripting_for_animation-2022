@@ -10,6 +10,8 @@ public class Timer : MonoBehaviour
     public TextMeshProUGUI timeText;
     public float timeerNumber;
 
+    public float coutdownnumber = 7;
+
 
     public void Start()
     {
@@ -28,6 +30,38 @@ public class Timer : MonoBehaviour
 
         timeText.text = "Timer:  " + timeerNumber;
 
+        if(coutdownnumber >= 0)
+        {
+
+            TimerCountdown();
+
+        }
+
+        else if(coutdownnumber == 0)
+        {
+
+            
+
+        }
+
+
+    }
+
+    public void TimerCountdown()
+    {
+    
+
+
+        coutdownnumber -= Mathf.Round(timeerNumber * 10.0f) * 0.1f * 0.6f + Time.deltaTime;
+
+        Debug.Log("Countdown: " + coutdownnumber);
+
+        if(coutdownnumber == 0)
+        {
+
+
+
+        }
 
     }
 
