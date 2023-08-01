@@ -10,6 +10,10 @@ public class ChosseAnimation : MonoBehaviour
     public Animation number3;
     public float numberToPick;
 
+    public Transform[] pathway1;
+    public Transform[] pathway2;
+    public Transform[] pathway3;
+
     void Start()
     {
         
@@ -25,8 +29,10 @@ public class ChosseAnimation : MonoBehaviour
         if(numberToPick == 1)
         {
 
-            Animation(number1);
+            pathway1 =  new Vector3.pathway1;
 
+            Vector3.MoveTowards(new Vector3(),pathway1 , 0);
+           
         }
 
     }
