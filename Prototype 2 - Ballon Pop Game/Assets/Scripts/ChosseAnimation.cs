@@ -29,9 +29,7 @@ public class ChosseAnimation : MonoBehaviour
         if(numberToPick == 1)
         {
 
-            pathway1 =  new Vector3.pathway1;
 
-            Vector3.MoveTowards(new Vector3(),pathway1 , 0);
            
         }
 
