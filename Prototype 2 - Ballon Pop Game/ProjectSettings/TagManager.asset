@@ -8,6 +8,9 @@ TagManager:
   - Point B
   - Point C
   - Score Manager
+  - Death Menu
+  - Pause Menu
+  - PopUpMenu
   layers:
   - Default
   - TransparentFX
