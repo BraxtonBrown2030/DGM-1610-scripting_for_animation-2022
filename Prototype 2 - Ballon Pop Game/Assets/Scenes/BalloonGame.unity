@@ -470,6 +470,7 @@ GameObject:
   - component: {fileID: 257610859}
   - component: {fileID: 257610858}
   - component: {fileID: 257610857}
+  - component: {fileID: 257610860}
   m_Layer: 5
   m_Name: Restart
   m_TagString: Untagged
@@ -540,7 +541,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 257610858}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 257610860}
+        m_TargetAssemblyTypeName: MenuSctips, Assembly-CSharp
+        m_MethodName: Restart
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &257610858
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -579,6 +592,21 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 257610855}
   m_CullTransparentMesh: 1
+--- !u!114 &257610860
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 257610855}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2194a358ae035fd43b035f37767ee7a8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pauseCanvas: {fileID: 0}
+  deathcanvas: {fileID: 0}
+  startPopUp: {fileID: 0}
 --- !u!1 &280190172
 GameObject:
   m_ObjectHideFlags: 0
@@ -841,8 +869,9 @@ GameObject:
   - component: {fileID: 892821526}
   - component: {fileID: 892821525}
   - component: {fileID: 892821524}
+  - component: {fileID: 892821527}
   m_Layer: 5
-  m_Name: Button
+  m_Name: Quit Game
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -911,7 +940,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 892821525}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 892821527}
+        m_TargetAssemblyTypeName: MenuSctips, Assembly-CSharp
+        m_MethodName: QuitGame
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &892821525
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -950,6 +991,21 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 892821522}
   m_CullTransparentMesh: 1
+--- !u!114 &892821527
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 892821522}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2194a358ae035fd43b035f37767ee7a8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pauseCanvas: {fileID: 0}
+  deathcanvas: {fileID: 0}
+  startPopUp: {fileID: 0}
 --- !u!1 &939918875
 GameObject:
   m_ObjectHideFlags: 0
@@ -1691,8 +1747,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   score: 0
-  scoreText: {fileID: 2124694441}
+  scoreText: {fileID: 0}
   sceneToLoad: 0
+  menuScrips: {fileID: 0}
 --- !u!1 &1789323802
 GameObject:
   m_ObjectHideFlags: 0
@@ -1780,6 +1837,7 @@ GameObject:
   - component: {fileID: 1789964049}
   - component: {fileID: 1789964048}
   - component: {fileID: 1789964047}
+  - component: {fileID: 1789964050}
   m_Layer: 5
   m_Name: Main Menu
   m_TagString: Untagged
@@ -1850,7 +1908,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1789964048}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1789964050}
+        m_TargetAssemblyTypeName: MenuSctips, Assembly-CSharp
+        m_MethodName: Mainmenu
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1789964048
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1889,6 +1959,21 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1789964045}
   m_CullTransparentMesh: 1
+--- !u!114 &1789964050
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1789964045}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2194a358ae035fd43b035f37767ee7a8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pauseCanvas: {fileID: 0}
+  deathcanvas: {fileID: 0}
+  startPopUp: {fileID: 0}
 --- !u!1 &1840866736
 GameObject:
   m_ObjectHideFlags: 0
@@ -2004,6 +2089,7 @@ GameObject:
   - component: {fileID: 1861074897}
   - component: {fileID: 1861074896}
   - component: {fileID: 1861074895}
+  - component: {fileID: 1861074898}
   m_Layer: 5
   m_Name: X_Button
   m_TagString: Untagged
@@ -2074,7 +2160,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1861074896}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1861074898}
+        m_TargetAssemblyTypeName: MenuSctips, Assembly-CSharp
+        m_MethodName: ClosePausedMenu
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1861074896
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2113,6 +2211,21 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1861074893}
   m_CullTransparentMesh: 1
+--- !u!114 &1861074898
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1861074893}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2194a358ae035fd43b035f37767ee7a8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pauseCanvas: {fileID: 1532086175}
+  deathcanvas: {fileID: 2083456279}
+  startPopUp: {fileID: 0}
 --- !u!1 &1945401192
 GameObject:
   m_ObjectHideFlags: 0
@@ -2306,7 +2419,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Button
+  m_text: Quit Game
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}

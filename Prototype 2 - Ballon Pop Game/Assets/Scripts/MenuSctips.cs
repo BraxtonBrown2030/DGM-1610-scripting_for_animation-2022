@@ -57,10 +57,26 @@ public class MenuSctips : MonoBehaviour
         Time.timeScale = 1; 
 
     }
+
+    public void ClosePausedMenu()
+    {
+
+        pauseCanvas.enabled = false;
+        Time.timeScale = 1;
+
+    }
+
     public void Mainmenu()
     {
 
         SceneManager.LoadScene(0);
+
+    }
+
+    public void QuitGame()
+    {
+
+        Application.Quit();
 
     }
 

@@ -10,11 +10,14 @@ public class ScoreManager : MonoBehaviour
     public int score; // keep trak of the score
     public TextMeshProUGUI scoreText; // text onject to br modified (edit the score text with code) 
     public int sceneToLoad;
+    public MenuSctips menuScrips;
 
     // Start is called before the first frame update
     void Start()
     {
         UpdateScoreText();
+
+        menuScrips = GameObject.FindGameObjectWithTag("Death Menu").GetComponent<MenuSctips>();
     }
 
     public void IncreaseScoreText( int amount)
@@ -34,7 +37,8 @@ public class ScoreManager : MonoBehaviour
         if(score <= -200)
         {
             
-            SceneManager.LoadScene("sceneToLoad");
+            menuScrips.deathcanvas.enabled = true;
+            Time.timeScale = 0;
 
         }
 
