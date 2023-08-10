@@ -14,19 +14,18 @@ public class Wave_Manager : MonoBehaviour
     public TextMeshProUGUI wavetext;
     public float amount = 1;
     public float wavetime;
-    public ScoreManager scoreManager;
+    
     
     void Start()
     {
         
-        scoreManager = GameObject.FindGameObjectWithTag("Score Manager").GetComponent<ScoreManager>();
-
+        //wave = GameObject.FindGameObjectWithTag("Score Manager").GetComponent<Scoreman>;
     }
 
 
     void Update()
     {
-
+        /*
         Time.timeScale = 0.5f;
 
         //Debug.Log(wavetime);
@@ -60,7 +59,7 @@ public class Wave_Manager : MonoBehaviour
             UpdateWave();
             
         }
-
+        */
     }
 
     
@@ -79,5 +78,5 @@ public class Wave_Manager : MonoBehaviour
 
 
     }
-
+    
 }

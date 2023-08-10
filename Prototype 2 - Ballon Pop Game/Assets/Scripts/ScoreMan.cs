@@ -1,10 +1,9 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using TMPro; // to edit text and other thing on a menu or seane
-using UnityEngine.SceneManagement;
+using TMPro;
 
-public class ScoreManager : MonoBehaviour
+public class ScoreMan : MonoBehaviour
 {
     public int score; // keep trak of the score
     public TextMeshProUGUI scoreText; // text onject to br modified (edit the score text with code) 
@@ -41,6 +40,5 @@ public class ScoreManager : MonoBehaviour
         }
 
     }
-
 
 }

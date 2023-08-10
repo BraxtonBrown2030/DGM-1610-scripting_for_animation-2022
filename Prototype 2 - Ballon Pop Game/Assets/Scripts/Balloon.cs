@@ -23,7 +23,7 @@ public class Balloon : MonoBehaviour
         if(ClickToPop == 0)
         {
             ScoreManager.IncreaseScoreText(ScoreToGive);
-            Destroy(gameObject);
+            Destroy(transform.gameObject);
         }
     }
 

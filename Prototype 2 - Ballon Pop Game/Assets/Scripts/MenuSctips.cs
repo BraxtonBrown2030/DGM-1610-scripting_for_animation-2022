@@ -15,9 +15,7 @@ public class MenuSctips : MonoBehaviour
     {
         pauseCanvas = GameObject.FindGameObjectWithTag("Pause Menu").GetComponent<Canvas>();
         deathcanvas = GameObject.FindGameObjectWithTag("Death Menu").GetComponent<Canvas>();
-        startPopUp = GameObject.FindGameObjectWithTag("Start PopUp").GetComponent<Canvas>();
 
-        Time.timeScale = 0;
     }
 
     

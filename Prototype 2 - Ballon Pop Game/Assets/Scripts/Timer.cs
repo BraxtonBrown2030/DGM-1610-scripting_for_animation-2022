@@ -54,7 +54,7 @@ public class Timer : MonoBehaviour
 
         coutdownnumber -= Mathf.Round(timeerNumber * 10.0f) * 0.1f * 0.6f + Time.deltaTime;
 
-        Debug.Log("Countdown: " + coutdownnumber);
+       // Debug.Log("Countdown: " + coutdownnumber);
 
         if(coutdownnumber == 0)
         {

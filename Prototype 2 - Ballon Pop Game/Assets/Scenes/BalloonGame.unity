@@ -1110,7 +1110,6 @@ MonoBehaviour:
   wavetext: {fileID: 1945401194}
   amount: 0
   wavetime: 0
-  scoreManager: {fileID: 0}
 --- !u!4 &868580398
 Transform:
   m_ObjectHideFlags: 0
@@ -3380,7 +3379,7 @@ Canvas:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2083456276}
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 3
   m_RenderMode: 0
   m_Camera: {fileID: 0}
@@ -3679,7 +3678,7 @@ PrefabInstance:
     - target: {fileID: 668834599, guid: f3dbca7a5b2ce9345abe856204f9b419, type: 3}
       propertyPath: ScoreManager
       value: 
-      objectReference: {fileID: 1776286106}
+      objectReference: {fileID: 0}
     - target: {fileID: 8579780158349964744, guid: f3dbca7a5b2ce9345abe856204f9b419, type: 3}
       propertyPath: m_Name
       value: Red_Balloon
